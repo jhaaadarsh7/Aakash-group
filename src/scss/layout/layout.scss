@@ -1,0 +1,44 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  border-top: $secondary-color 5px solid;
+  padding: 30px;
+  .logo-wrap {
+    display: flex;
+    width: 100px;
+    justify-self: center;
+    .logo {
+      width: 100%;
+    }
+  }
+  .navbar {
+    align-self: center;
+    justify-self: center;
+    .navlink {
+      font-size: 1.2rem;
+      font-weight: 300;
+      padding: 25px 25px;
+      &:hover {
+        border-bottom: $secondary-color 5px solid;
+      }
+    }
+  }
+  .right {
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    .info {
+      padding-right: 20px;
+      border-right: 1px solid $color-dark;
+      font-size: 1.2rem;
+    }
+    .sidebar-toggler {
+      padding-left: 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
