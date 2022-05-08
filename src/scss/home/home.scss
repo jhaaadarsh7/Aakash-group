@@ -1,0 +1,10 @@
+.home-page {
+  .page-header {
+    width: 100%;
+    video {
+      height: calc(100vh - 131.66px);
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
