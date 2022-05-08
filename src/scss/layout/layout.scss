@@ -42,3 +42,59 @@
     }
   }
 }
+
+.footer {
+  background-color: #042433;
+  color: $color-light;
+  a {
+    color: $color-light;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+  .footer-content {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 35px 0;
+    .footer {
+      &-info {
+        padding: 0 20px;
+        .logo-wrap {
+          width: 150px;
+          margin-bottom: 15px;
+          .logo {
+            width: 100%;
+          }
+        }
+      }
+      &-industries,
+      &-menu {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        .heading {
+          font-weight: 700;
+          letter-spacing: 1px;
+          font-size: 1.4rem;
+          padding: 15px 0;
+        }
+      }
+      &-contact {
+        padding: 0 20px;
+        .heading {
+          font-weight: 700;
+          letter-spacing: 1px;
+          font-size: 1.4rem;
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+  .copyright {
+    padding: 20px;
+    text-align: center;
+    border-top: $primary-color 1px solid;
+  }
+}

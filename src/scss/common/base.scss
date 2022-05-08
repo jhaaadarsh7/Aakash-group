@@ -7,3 +7,10 @@
 body {
   font-family: $primary-font;
 }
+
+a {
+  color: $color-dark;
+  &:hover {
+    color: $secondary-color;
+  }
+}
