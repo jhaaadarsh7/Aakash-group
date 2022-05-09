@@ -1,0 +1,53 @@
+.about-page {
+  .page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),
+      url("../../assets/images/about-banner.png") center center / cover
+        no-repeat;
+    height: calc(100vh - 131.66px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text {
+      text-align: center;
+      h1 {
+        color: $color-light;
+        font-size: 2.5rem;
+      }
+      p {
+        color: $color-light;
+        font-size: 1.6rem;
+        width: 600px;
+      }
+    }
+  }
+  .how-we-started {
+    margin-top: 50px;
+    .container {
+      display: flex;
+      align-items: center;
+    }
+    .left,
+    .right {
+      width: 50%;
+    }
+    .right {
+      img {
+        width: 100%;
+      }
+    }
+    .left {
+      padding: 0 20px;
+      .title {
+        padding-bottom: 20px;
+        .mini {
+          font-weight: 300;
+          font-size: 1.1rem;
+        }
+        .main {
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
