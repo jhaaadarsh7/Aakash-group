@@ -1,4 +1,8 @@
 import React from "react";
+import AboutSection from "./AboutSection";
+import GetStarted from "./GetStarted";
+import ServicesSection from "./ServicesSection";
+import StatsSection from "./StatsSection";
 
 const HomePage = () => {
   return (
@@ -10,8 +14,12 @@ const HomePage = () => {
             type="video/mp4"
           />
           Your browser does not support HTML5 video.
-        </video>{" "}
+        </video>
       </div>
+      <AboutSection />
+      <ServicesSection />
+      <GetStarted />
+      <StatsSection />
     </div>
   );
 };
