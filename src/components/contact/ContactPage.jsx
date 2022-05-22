@@ -34,8 +34,9 @@ const ContactPage = () => {
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             autoComplete="off">
-            <Row gutter={18}>
-              <Col span={6}>
+            <div className="heading">Send Us A Message</div>
+            <Row gutter={24}>
+              <Col span={7}>
                 <Form.Item
                   name="name"
                   rules={[
@@ -44,7 +45,7 @@ const ContactPage = () => {
                   <Input placeholder="Your Name" />
                 </Form.Item>
               </Col>
-              <Col span={6}>
+              <Col span={7}>
                 <Form.Item
                   name="email"
                   rules={[
@@ -53,7 +54,7 @@ const ContactPage = () => {
                   <Input placeholder="Your Email" />
                 </Form.Item>
               </Col>
-              <Col span={6}>
+              <Col span={7}>
                 <Form.Item
                   name="phone"
                   rules={[
@@ -67,8 +68,8 @@ const ContactPage = () => {
                 </Form.Item>
               </Col>
             </Row>
-            <Row gutter={18}>
-              <Col span={18}>
+            <Row gutter={24}>
+              <Col span={21}>
                 <Form.Item
                   name="message"
                   rules={[
@@ -107,9 +108,9 @@ const ContactPage = () => {
             </div>
             <div className="working-hours">
               <div className="heading">Working Hours</div>
-              <span>
+              {/* <span>
                 Our support Hotline is available 24 Hours a day: +61 3 8376 6284
-              </span>
+              </span> */}
               <div className="item">
                 <ClockCircleFilled /> Sunday-Friday: 10am to 6pm
               </div>
