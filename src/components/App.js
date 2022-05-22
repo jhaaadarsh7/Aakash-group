@@ -4,6 +4,7 @@ import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import AboutPage from "./about/AboutPage";
 import ContactPage from "./contact/ContactPage";
+import IndustriesPage from "./industries/IndustriesPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/about" element={<AboutPage />} />
         <Route exact path="/contact-us" element={<ContactPage />} />
+        <Route exact path="/industries" element={<IndustriesPage />} />
       </Routes>
       <Footer />
     </Router>
