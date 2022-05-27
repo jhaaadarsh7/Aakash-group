@@ -1,5 +1,6 @@
 import { Button } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const GetStarted = () => {
   return (
@@ -16,7 +17,9 @@ const GetStarted = () => {
             </div>
           </div>
           <div className="button-wrap">
-            <button className="contact-btn">Contact Us</button>
+            <Link to="/contact-us">
+              <button className="contact-btn">Contact Us</button>
+            </Link>
           </div>
         </div>
       </div>

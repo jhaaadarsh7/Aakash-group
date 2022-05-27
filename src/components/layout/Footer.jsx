@@ -21,30 +21,30 @@ const navLinks = [
   },
   {
     name: "Contact",
-    path: "/contact",
+    path: "/contact-us",
   },
 ];
 
 const industries = [
   {
     name: "Food And Beverages",
-    path: "/industries/food-and-beverages",
+    path: "/industries",
   },
   {
     name: "Information And Technology",
-    path: "/industries/information-and-technology",
+    path: "/industries",
   },
   {
     name: "Banking",
-    path: "/industries/banking",
+    path: "/industries",
   },
   {
     name: "Promoter Of Insurance Companies",
-    path: "/industries/promoter-of-insurance-companies",
+    path: "/industries",
   },
   {
     name: "Real Estate",
-    path: "/industries/real-estate",
+    path: "/industries",
   },
 ];
 

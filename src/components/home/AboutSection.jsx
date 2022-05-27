@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import image from "../../assets/images/about.jpg";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -24,9 +25,11 @@ const AboutSection = () => {
             eaque magni exercitationem temporibus optio, cum repudiandae dolor
             minima eveniet sit, deserunt, adipisci veritatis rerum alias. Saepe.
           </p>
-          <Button type="primary" size="large">
-            More Details
-          </Button>
+          <Link to="/about">
+            <Button type="primary" size="large">
+              More Details
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

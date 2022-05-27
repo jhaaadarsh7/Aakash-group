@@ -52,6 +52,49 @@
   }
 }
 
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: $color-light;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  box-shadow: 1px 1px 1px gray;
+  transition: all 0.2s ease;
+  transform: translate(100%);
+  z-index: 1;
+  .toggler-btn {
+    padding: 15px;
+  }
+  .side-bar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .side-bar-header {
+      margin: 25px auto;
+    }
+    .side-bar-links {
+      .side-bar-link {
+        padding: 15px;
+        font-size: 1.2rem;
+        font-weight: 300;
+        cursor: pointer;
+        &:hover {
+          border-bottom: $secondary-color 1px solid;
+        }
+      }
+    }
+  }
+}
+
+.show {
+  transform: translate(0);
+}
+
 .footer {
   background-color: #042433;
   color: $color-light;
