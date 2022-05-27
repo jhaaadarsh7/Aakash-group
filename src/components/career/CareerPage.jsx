@@ -2,6 +2,7 @@ import React from "react";
 import PageHeader from "./../common/PageHeader";
 import dataAnalyst from "../../assets/images/career/data-analyst.jpg";
 import graphicDesigner from "../../assets/images/career/graphic-designer.jpg";
+import { Link } from "react-router-dom";
 
 const openings = [
   {
@@ -44,7 +45,9 @@ const CareerPage = () => {
                   <div className="details-bot">{opening.shortDescription}</div>
                 </div>
                 <div className="apply-wrap">
-                  <button>Apply</button>
+                  <Link to={opening.link}>
+                    <button>Apply</button>
+                  </Link>
                 </div>
               </div>
             </li>

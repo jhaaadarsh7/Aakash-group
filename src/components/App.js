@@ -14,6 +14,9 @@ import RelianceInsurance from "./industries/RelianceInsurance";
 import AakashAi from "./industries/AakashAi";
 import MahalaxmiComplex from "./industries/MahaLaxmi";
 import HospitalityHotel from "./industries/HospitalityHotel";
+import CareerDetailPage from "./career/CareerDetailPage";
+import DataAnalyst from "./career/DataAnalyst";
+import GraphicDesigner from "./career/GraphicDesigner";
 
 function App() {
   return (
@@ -53,6 +56,12 @@ function App() {
           element={<HospitalityHotel />}
         />
         <Route exact path="/careers" element={<CareerPage />} />
+        <Route exact path="/careers/data-analyst" element={<DataAnalyst />} />
+        <Route
+          exact
+          path="/careers/graphic-designer"
+          element={<GraphicDesigner />}
+        />
       </Routes>
       <Footer />
     </Router>

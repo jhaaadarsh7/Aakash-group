@@ -8,7 +8,12 @@ const HomePage = () => {
   return (
     <div className="home-page page">
       <div className="page-header">
-        <video id="home-video" loop muted autoPlay>
+        <video
+          id="home-video"
+          poster="https://aakash.group/wp-content/uploads/2019/10/logo.png"
+          loop
+          muted
+          autoPlay>
           <source
             src="https://aakash.group/wp-content/uploads/2019/10/aakash-group-text-anime-change1.mp4"
             type="video/mp4"
