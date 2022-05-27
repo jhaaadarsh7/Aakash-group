@@ -17,6 +17,12 @@
         color: $color-light;
         font-size: 1.6rem;
         width: 600px;
+
+        @media (max-width: 660px) {
+          margin: 0 40px;
+          width: fit-content;
+          font-size: 1.4rem;
+        }
       }
     }
   }
@@ -24,22 +30,36 @@
     .content {
       padding: 50px 0;
       display: flex;
-      justify-content: spa;
+      justify-content: space-between;
       align-items: center;
       > div {
         width: 40%;
+      }
+      @media (max-width: 1030px) {
+        flex-direction: column-reverse;
+        > div {
+          width: 70%;
+        }
       }
       form {
         width: 60%;
         margin: auto;
         padding-left: 100px;
+        @media (max-width: 1030px) {
+          padding-left: 0;
+          width: 80%;
+        }
         .heading {
           font-size: 2rem;
           padding: 25px 0;
           font-weight: 700;
+          @media (max-width: 1030px) {
+            text-align: center;
+          }
         }
       }
       .info {
+        text-align: center;
         padding: 25px 0;
         font-size: 1.3rem;
         .heading {

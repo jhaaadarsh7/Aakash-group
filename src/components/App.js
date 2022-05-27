@@ -56,10 +56,10 @@ function App() {
           element={<HospitalityHotel />}
         />
         <Route exact path="/careers" element={<CareerPage />} />
-        <Route exact path="/careers/data-analyst" element={<DataAnalyst />} />
+        <Route exact path="/career/data-analyst" element={<DataAnalyst />} />
         <Route
           exact
-          path="/careers/graphic-designer"
+          path="/career/graphic-designer"
           element={<GraphicDesigner />}
         />
       </Routes>

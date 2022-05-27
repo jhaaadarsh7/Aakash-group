@@ -10,9 +10,9 @@ const IndustryHeader = (props) => {
       </div>
       <div className="right">
         <div className="logo-wrap">
-          <Link to={props.website} target="_blank">
+          <a href={props.website} target="_blank" rel="noreferrer">
             <img src={props.logo ? props.logo : ""} alt={props.company} />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

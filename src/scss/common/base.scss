@@ -18,6 +18,9 @@ a {
 .container {
   width: 85%;
   margin: auto;
+  @media (max-width: 800px) {
+    width: 90%;
+  }
 }
 
 .component {
@@ -45,6 +48,12 @@ ul {
       color: $color-light;
       font-size: 1.6rem;
       width: 600px;
+
+      @media (max-width: 660px) {
+        margin: 0 40px;
+        width: fit-content;
+        font-size: 1.4rem;
+      }
     }
   }
 }

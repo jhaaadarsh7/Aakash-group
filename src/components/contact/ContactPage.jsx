@@ -36,25 +36,25 @@ const ContactPage = () => {
             autoComplete="off">
             <div className="heading">Send Us A Message</div>
             <Row gutter={24}>
-              <Col span={7}>
+              <Col span={8}>
                 <Form.Item
                   name="name"
                   rules={[
                     { required: true, message: "Please input your name!" },
                   ]}>
-                  <Input placeholder="Your Name" />
+                  <Input placeholder="Name" />
                 </Form.Item>
               </Col>
-              <Col span={7}>
+              <Col span={8}>
                 <Form.Item
                   name="email"
                   rules={[
                     { required: true, message: "Please input your email!" },
                   ]}>
-                  <Input placeholder="Your Email" />
+                  <Input placeholder="Email" />
                 </Form.Item>
               </Col>
-              <Col span={7}>
+              <Col span={8}>
                 <Form.Item
                   name="phone"
                   rules={[
@@ -64,12 +64,12 @@ const ContactPage = () => {
                       type: "tel",
                     },
                   ]}>
-                  <Input placeholder="Your Phone" />
+                  <Input placeholder="Phone" />
                 </Form.Item>
               </Col>
             </Row>
             <Row gutter={24}>
-              <Col span={21}>
+              <Col span={24}>
                 <Form.Item
                   name="message"
                   rules={[
@@ -83,8 +83,8 @@ const ContactPage = () => {
                 </Form.Item>
               </Col>
             </Row>
-            <Row gutter={18}>
-              <Col span={18}>
+            <Row gutter={24}>
+              <Col span={12} offset={4}>
                 <Form.Item wrapperCol={{ offset: 10 }}>
                   <Button type="primary" htmlType="submit">
                     Send Message

@@ -5,9 +5,9 @@ const SideBySide = (props) => {
   return (
     <div className="side-by-side component">
       <div className="container">
-        <div className="left">
+        {/* <div className="left">
           <img src={props.image} alt="" />
-        </div>
+        </div> */}
         <div className="right">
           <div className="title">
             <span>About Us</span>
