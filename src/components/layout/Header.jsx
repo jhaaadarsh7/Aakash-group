@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../assets/images/LOGO.png";
 import Navbar from "./Navbar";
 import { BarsOutlined, PhoneFilled, DownOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Dropdown, Menu, Space } from "antd";
 
 const navLinks = [
@@ -117,6 +117,12 @@ const menu = (
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  let location = useLocation();
+
+  useEffect(() => {
+    console.log(location);
+    setIsOpen(false);
+  }, [location.pathname]);
 
   return (
     <div className="header">
