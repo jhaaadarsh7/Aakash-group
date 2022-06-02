@@ -118,6 +118,11 @@
       }
     }
   }
+  .side-by-side {
+    .container {
+      flex-direction: row-reverse;
+    }
+  }
 }
 
 .industry-page {
