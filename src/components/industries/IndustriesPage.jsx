@@ -14,7 +14,6 @@ const IndustriesPage = () => {
         title={["We Provide", "Best Business Solutions"]}
         description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, laborum debitis, est reiciendis natus quam sed a quos pariatur inventore officia vel itaque, consequuntur quidem optio laudantium nam? Fuga, quae!"
       />
-
       <Industries />
     </div>
   );

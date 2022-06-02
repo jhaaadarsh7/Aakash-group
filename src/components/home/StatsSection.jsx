@@ -2,20 +2,16 @@ import React from "react";
 
 const stats = [
   {
-    name: "Happy Clients",
-    value: "1000",
+    name: "Years Industry Experience",
+    value: "50+",
   },
   {
-    name: "Projects Done",
-    value: "200",
+    name: "Projects Accomplished",
+    value: "100+",
   },
   {
-    name: "Awards Won",
-    value: "10",
-  },
-  {
-    name: "Cups of Coffee",
-    value: "100",
+    name: "Clients Across Nepal",
+    value: "50+",
   },
 ];
 

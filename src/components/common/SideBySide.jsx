@@ -18,7 +18,6 @@ const SideBySide = (props) => {
     <div className="side-by-side component">
       <div className="container">
         {renderImage()}
-
         <div className="right">
           <div className="title">
             <div className="main">

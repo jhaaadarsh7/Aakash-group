@@ -2,18 +2,16 @@ import { Button } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const GetStarted = () => {
+const ContactSection = () => {
   return (
     <div className="get-started component">
       <div className="container">
         <div className="wrapper">
           <div className="text">
-            <div className="heading">Get Started Today</div>
+            <div className="heading">Work With Us</div>
             <div className="description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Provident perferendis, quae dolor vero at minus amet quidem quam
-              quisquam, temporibus sint totam ullam. Voluptas, quas neque omnis
-              quasi magni harum?
+              We delivery successful projects in a wide range of industries
+              including FMCG, Real Estate, Banking and Insurance.
             </div>
           </div>
           <div className="button-wrap">
@@ -27,4 +25,4 @@ const GetStarted = () => {
   );
 };
 
-export default GetStarted;
+export default ContactSection;

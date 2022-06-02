@@ -3,18 +3,20 @@ import icon from "../../assets/images/service.png";
 
 const services = [
   {
-    name: "Creative Team",
-    description: "We have creative team, they always ready to help you.",
+    name: "Vision",
+    description: "To contribute to the upliftment of the nation's economy",
     icon: icon,
   },
   {
-    name: "Best Service",
-    description: "lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    name: "Mission",
+    description:
+      "To provide high-quality products and services to the people of Nepal",
     icon: icon,
   },
   {
-    name: "Online Support",
-    description: "lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    name: "Values",
+    description:
+      "To move forward with its country, customers, and community in mind",
     icon: icon,
   },
 ];

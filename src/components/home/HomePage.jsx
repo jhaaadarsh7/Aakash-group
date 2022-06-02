@@ -1,8 +1,8 @@
 import React from "react";
 import AboutSection from "./AboutSection";
-import GetStarted from "./GetStarted";
 import ServicesSection from "./ServicesSection";
 import StatsSection from "./StatsSection";
+import ContactSection from "./ContactSection";
 
 const HomePage = () => {
   return (
@@ -23,7 +23,7 @@ const HomePage = () => {
       </div>
       <AboutSection />
       <ServicesSection />
-      <GetStarted />
+      <ContactSection />
       <StatsSection />
     </div>
   );

@@ -14,16 +14,22 @@ const AboutSection = () => {
           <div className="title">
             <span>About Us</span>
             <div className="main">
-              Provide Best
-              <br /> Business Solutions
+              Welcome To
+              <br />
+              Aakash Group
             </div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit quos blanditiis necessitatibus. Illo expedita eos
-            consequatur odio hic vero voluptatem praesentium asperiores impedit
-            eaque magni exercitationem temporibus optio, cum repudiandae dolor
-            minima eveniet sit, deserunt, adipisci veritatis rerum alias. Saepe.
+            Aakash Group is located in the heart of Nepal, Kathmandu, where we
+            form an intrinsic part of every realm of life from{" "}
+            <Link to="/industries">packaged food manufacturing</Link>,{" "}
+            <Link to="/industries">restaurants</Link>,{" "}
+            <Link to="/industries">insurance</Link>,{" "}
+            <Link to="/industries">real estate</Link> and{" "}
+            <Link to="/industries">banking</Link>. Aakash Group continues to
+            provide cost-effective solutions to businesses all over Nepal. The
+            company prides itself in its premium quality and exceptional
+            customer service.
           </p>
           <Link to="/about">
             <Button type="primary" size="large">
