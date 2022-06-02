@@ -23,8 +23,8 @@ const HomePage = () => {
       </div>
       <AboutSection />
       <ServicesSection />
-      <ContactSection />
       <StatsSection />
+      <ContactSection />
     </div>
   );
 };

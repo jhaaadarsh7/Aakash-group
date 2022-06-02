@@ -25,8 +25,8 @@ const CareerPage = () => {
   return (
     <div className="career-page page">
       <PageHeader
-        heading="Career"
-        description="Since we have been growing hard lately, we are looking for member to join our team!"
+        heading="Careers"
+        description="Since we have been growing fast lately, we are looking for members to join our team!"
       />
       <div className="container">
         <div className="title">

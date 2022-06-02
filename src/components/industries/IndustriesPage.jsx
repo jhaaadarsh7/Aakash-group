@@ -8,11 +8,11 @@ const IndustriesPage = () => {
     <div className="industries-page page">
       <PageHeader
         heading="Industries"
-        description="Aakash Group always tries to provide the best Business Solutions for Clients to grow up their Business very sharply and smoothly."
+        description="Aakash Group provides the best business solutions to improve our client's businesses."
       />
       <SideBySide
-        title={["We Provide", "Best Business Solutions"]}
-        description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, laborum debitis, est reiciendis natus quam sed a quos pariatur inventore officia vel itaque, consequuntur quidem optio laudantium nam? Fuga, quae!"
+        title={["One Company.", "Multiple Solutions."]}
+        description="Aakash Group, a fusion of various companies each of them being the best in their own field. We are continuously dedicated to empower and improve the lives of our customers, employees, investors, partners and the entire nation."
       />
       <Industries />
     </div>

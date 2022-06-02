@@ -99,10 +99,10 @@ const CareerDetailPage = ({ careerDetails }) => {
               <Input />
             </Form.Item>
             <Form.Item
-              label="Email Address"
-              name="email"
+              label="Phone Number"
+              name="phone"
               rules={[
-                { required: true, message: "Please input your email address!" },
+                { required: true, message: "Please input your phone number!" },
               ]}>
               <Input />
             </Form.Item>

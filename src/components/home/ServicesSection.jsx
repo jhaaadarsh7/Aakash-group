@@ -1,23 +1,25 @@
 import React from "react";
-import icon from "../../assets/images/service.png";
+import vision from "../../assets/icons/vision.png";
+import value from "../../assets/icons/value.png";
+import mission from "../../assets/icons/mission.png";
 
 const services = [
   {
     name: "Vision",
     description: "To contribute to the upliftment of the nation's economy",
-    icon: icon,
+    icon: vision,
   },
   {
     name: "Mission",
     description:
       "To provide high-quality products and services to the people of Nepal",
-    icon: icon,
+    icon: mission,
   },
   {
     name: "Values",
     description:
       "To move forward with its country, customers, and community in mind",
-    icon: icon,
+    icon: value,
   },
 ];
 

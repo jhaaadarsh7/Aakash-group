@@ -81,6 +81,10 @@
           }
           .icon {
             padding: 20px;
+            width: 150px;
+            img {
+              width: 100%;
+            }
           }
           .data {
             @media (max-width: 1000px) {
@@ -114,15 +118,16 @@
       .stat {
         text-align: center;
         .name {
-          font-size: 1.4rem;
+          font-size: 1.3rem;
           @media (max-width: 420px) {
             font-size: 1.1rem;
           }
         }
         .value {
-          font-size: 1.5rem;
+          font-weight: 700;
+          font-size: 1.9rem;
           @media (max-width: 420px) {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
           }
         }
       }
@@ -130,7 +135,7 @@
   }
   .get-started {
     .container {
-      width: 60%;
+      width: 80%;
       @media (max-width: 1200px) {
         width: 80%;
       }
