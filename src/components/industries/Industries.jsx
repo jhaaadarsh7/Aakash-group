@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import angan from "../../assets/images/industries/angan-logo.png";
 import aakashLabs from "../../assets/images/industries/aakashlabs-logo.png";
 import aakashAi from "../../assets/images/industries/aakash-ai.png";
@@ -61,6 +61,10 @@ const industries = [
 ];
 
 const Industries = () => {
+  useEffect(() => {
+    document.title = "Aakash Group | Industries";
+  }, []);
+
   return (
     <>
       <div className="industries component">

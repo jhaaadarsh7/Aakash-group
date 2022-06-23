@@ -6,9 +6,13 @@ import {
   MailFilled,
 } from "@ant-design/icons";
 import { Form, Input, Button, Row, Col } from "antd";
-import React from "react";
+import React, { useEffect } from "react";
 
 const ContactPage = () => {
+  useEffect(() => {
+    document.title = "Aakash Group | Contact Us";
+  }, []);
+
   const onFinish = (values) => {
     console.log("Success:", values);
   };

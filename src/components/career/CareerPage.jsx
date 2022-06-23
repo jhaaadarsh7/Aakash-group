@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeader from "./../common/PageHeader";
 import dataAnalyst from "../../assets/images/career/data-analyst.jpg";
 import graphicDesigner from "../../assets/images/career/graphic-designer.jpg";
@@ -22,6 +22,10 @@ const openings = [
 ];
 
 const CareerPage = () => {
+  useEffect(() => {
+    document.title = "Aakash Group | Career";
+  }, []);
+
   return (
     <div className="career-page page">
       <PageHeader

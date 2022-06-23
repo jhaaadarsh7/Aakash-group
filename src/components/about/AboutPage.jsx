@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SideBySide from "../common/SideBySide";
 import HowWeStarted from "./HowWeStarted";
 import Info from "./Info";
@@ -6,6 +6,10 @@ import img from "../../assets/images/who-we-are.png";
 import { Link } from "react-router-dom";
 
 const AboutPage = () => {
+  useEffect(() => {
+    document.title = "Aakash Group | About";
+  }, []);
+
   return (
     <div className="about-page page">
       <div className="page-header">
