@@ -3,21 +3,15 @@ import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
 import StatsSection from "./StatsSection";
 import ContactSection from "./ContactSection";
+import video from "../../assets/images/aakash-group-vid.mp4";
+import logo from "../../assets/images/LOGO.png";
 
 const HomePage = () => {
   return (
     <div className="home-page page">
       <div className="page-header">
-        <video
-          id="home-video"
-          poster="https://aakash.group/wp-content/uploads/2019/10/logo.png"
-          loop
-          muted
-          autoPlay>
-          <source
-            src="https://aakash.group/wp-content/uploads/2019/10/aakash-group-text-anime-change1.mp4"
-            type="video/mp4"
-          />
+        <video id="home-video" poster={logo} loop muted autoPlay>
+          <source src={video} type="video/mp4" />
           Your browser does not support HTML5 video.
         </video>
       </div>

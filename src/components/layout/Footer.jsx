@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
           <div className="item">
             <strong>Email:</strong>{" "}
-            <a href="mailto: info@aakashlabs.com">info@aakashlabs.com</a>
+            <a href="mailto: info@aakash.group">info@aakash.group</a>
           </div>
           <div className="item">
             <strong>Opening Hours:</strong> Sunday To Friday (10:00 To 6:00)

@@ -103,7 +103,7 @@ const ContactPage = () => {
               </div>
               <div className="item">
                 <MailFilled />{" "}
-                <a href="mailto: info@aakashlabs.com">info@aakash.group</a>
+                <a href="mailto: info@aakash.group">info@aakash.group</a>
               </div>
             </div>
             <div className="working-hours">
