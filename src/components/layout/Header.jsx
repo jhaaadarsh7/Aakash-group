@@ -134,7 +134,9 @@ const Header = () => {
       <Navbar />
       <div className="right">
         <div className="info">
-          <PhoneFilled className="phone-icon" /> 01- 4430196
+          <a href="tel: +97714430196">
+            <PhoneFilled className="phone-icon" /> 01- 4430196
+          </a>
         </div>
         <div className="sidebar-toggler" onClick={() => setIsOpen(true)}>
           <BarsOutlined />

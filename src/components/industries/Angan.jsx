@@ -9,12 +9,12 @@ import Features from "./layout/Features";
 const about = {
   description:
     "In association with Bikanervala Foods from India, Aakash Group has been operating Indian fast food restaurants by the name of Angan in Nepal since 1992. Angan is traditional household brand in Nepal widely acknowledged for quality sweets, namkeens and fast food.  Angan started as just a traditional sweets, chat, fast food and bakery store. However, it gradually and successfully carried the strides of taking great traditional taste to new heights. As a result, it has gained stronghold over the Indian sweets & fast food and market in Nepal.",
-  title: "Angan Sweets",
+  title: "Aakash Foods",
   link: "https://angansweets.com/",
 };
 
 const header = {
-  company: "Angan Nepal",
+  company: "Aakash Foods",
   logo: anganLogo,
   caption:
     "In association with Bikanervala Foods from India, Aakash Group has been operating Indian fast food restaurants by the name of Angan in Nepal since 1992.",

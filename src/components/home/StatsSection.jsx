@@ -19,12 +19,13 @@ const StatsSection = () => {
   return (
     <div className="stats component">
       <div className="container">
-        {stats.map((stat, index) => (
+        {/* {stats.map((stat, index) => (
           <div key={index} className="stat">
             <div className="value">{stat.value}</div>
             <div className="name">{stat.name}</div>
           </div>
-        ))}
+        ))} */}
+        <div className="text">Over 150 years of history in Nepal.</div>
       </div>
     </div>
   );

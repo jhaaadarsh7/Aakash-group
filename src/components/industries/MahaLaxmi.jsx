@@ -1,7 +1,7 @@
 import React from "react";
 import IndustryHeader from "./layout/IndustryHeader";
-// import logo from "../../assets/images/industries/mahalaxmi-logo.png";
-import img from "../../assets/images/industries/mahalaxmi/img.jpg";
+import logo from "../../assets/images/industries/mahalaxmi-logo.png";
+import img from "../../assets/images/industries/mahalaxmi/mahalaxmi.png";
 import AboutIndustry from "./layout/AboutIndustry";
 import Specialities from "./layout/Specialities";
 import Features from "./layout/Features";
@@ -15,7 +15,7 @@ const about = {
 
 const header = {
   company: "Mahalaxmi Complex Pvt Ltd.",
-  // logo: logo,
+  logo: logo,
   caption:
     "Aakash Group is dedicated to developing environmentally sustainable, strategically located and economically viable properties in Nepal.",
   website: "/industries",

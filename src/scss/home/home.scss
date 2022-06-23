@@ -100,7 +100,7 @@
     }
   }
   .stats {
-    background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),
+    background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
       url("../../assets/images/stats-bg.jpg") center center / cover no-repeat;
     color: $color-light;
     margin-bottom: 0;
@@ -114,6 +114,9 @@
         .stat {
           margin-bottom: 15px;
         }
+      }
+      .text {
+        font-size: 1.8rem;
       }
       .stat {
         text-align: center;

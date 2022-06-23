@@ -12,7 +12,7 @@ const HowWeStarted = () => {
           <div className="content">
             <p>
               Aakash Group has touched the lives of people from its humble
-              beginnings as an importer of textiles and electronics 100 years
+              beginnings as an importer of textiles and electronics 150 years
               ago. Today, we are diversified into packaged food manufacturing,
               restaurants, insurance, real estate and banking.
             </p>
