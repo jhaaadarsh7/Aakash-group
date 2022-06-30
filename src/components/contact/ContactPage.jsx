@@ -29,7 +29,6 @@ const ContactPage = () => {
       form.resetFields();
     } catch (e) {
       NotificationManager.error("Error", "Error submitting form");
-      form.resetFields();
     }
   };
 

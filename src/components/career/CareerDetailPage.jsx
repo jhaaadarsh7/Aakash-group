@@ -7,7 +7,7 @@ import { NotificationManager } from "react-notifications";
 
 const CareerDetailPage = ({ careerDetails }) => {
   const [form] = Form.useForm();
-  const [imageUrl, setImageUrl] = useState();
+  const [fileName, setFileName] = useState("");
 
   const getBase64 = (img, callback) => {
     const reader = new FileReader();
@@ -41,6 +41,16 @@ const CareerDetailPage = ({ careerDetails }) => {
     console.log("Failed:", errorInfo);
   };
 
+  const beforeUpload = (file) => {
+    const isLt2M = file.size / 1024 / 1024 < 2;
+    if (!isLt2M) {
+      message.error("File must be smaller than 2MB!");
+      setFileName("");
+      return false;
+    }
+    return isLt2M;
+  };
+
   const handleChange = (info) => {
     if (info.file.status === "uploading") {
       return;
@@ -48,8 +58,9 @@ const CareerDetailPage = ({ careerDetails }) => {
 
     if (info.file.status === "done") {
       // Get this url from response in real world.
-      getBase64(info.file.originFileObj, (url) => {
-        setImageUrl(url);
+      getBase64(info.file.originFileObj, (name) => {
+        setFileName(info.file.originFileObj.name);
+        console.log(fileName);
       });
     }
   };
@@ -144,21 +155,31 @@ const CareerDetailPage = ({ careerDetails }) => {
               ]}>
               <Input />
             </Form.Item>
-            <Form.Item label="Address" name="address">
+            <Form.Item
+              label="Address"
+              name="address"
+              rules={[
+                { required: true, message: "Please input your address!" },
+              ]}>
               <Input />
             </Form.Item>
             <Form.Item
               name="resume"
               label="Resume"
+              rules={[
+                { required: true, message: "Please upload your resume!" },
+              ]}
               getValueFromEvent={({ file }) => file.originFileObj}
               extra=".docx or .pdf only">
               <Upload
                 maxCount={1}
                 customRequest={dummyRequest}
+                beforeUpload={beforeUpload}
                 onChange={handleChange}
-                showUploadList={true}
+                showUploadList={fileName === "" ? false : true}
                 accept=".doc, .docx, .pdf">
                 <Button icon={<UploadOutlined />}>Click to upload</Button>
+                <span className="file-name">{fileName}</span>
               </Upload>
             </Form.Item>
             <Form.Item>
