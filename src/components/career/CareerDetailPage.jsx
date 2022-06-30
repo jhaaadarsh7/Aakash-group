@@ -1,26 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { ClockCircleOutlined, LaptopOutlined } from "@ant-design/icons";
-import { Form, Input, Button, Upload } from "antd";
+import { Form, Input, Button, Upload, message } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
+import { aakashapi } from "./../api/aakashapi";
 
 const CareerDetailPage = ({ careerDetails }) => {
-  const onFinish = (values) => {
-    values = { ...values, job: careerDetails.title };
-    console.log("Success:", values);
+  const [imageUrl, setImageUrl] = useState();
+
+  const getBase64 = (img, callback) => {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => callback(reader.result));
+    reader.readAsDataURL(img);
+  };
+
+  const onFinish = async (values) => {
+    values = {
+      ...values,
+      aakashform: "true",
+      subject: "Contact Form",
+    };
+    const formData = new FormData();
+    console.log(values.resume);
+    for (const name in values) {
+      formData.append(name, values[name]);
+    }
+    try {
+      const response = await aakashapi.post("", formData);
+      console.log("success");
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
 
-  const normFile = (e) => {
-    console.log("Upload event:", e);
-
-    if (Array.isArray(e)) {
-      return e;
+  const handleChange = (info) => {
+    if (info.file.status === "uploading") {
+      return;
     }
 
-    return e?.fileList;
+    if (info.file.status === "done") {
+      // Get this url from response in real world.
+      getBase64(info.file.originFileObj, (url) => {
+        setImageUrl(url);
+      });
+    }
+  };
+
+  const dummyRequest = ({ file, onSuccess }) => {
+    setTimeout(() => {
+      onSuccess("ok");
+    }, 0);
   };
 
   return (
@@ -112,13 +144,13 @@ const CareerDetailPage = ({ careerDetails }) => {
             <Form.Item
               name="resume"
               label="Resume"
-              valuePropName="fileList"
-              getValueFromEvent={normFile}
+              getValueFromEvent={({ file }) => file.originFileObj}
               extra=".docx or .pdf only">
               <Upload
                 maxCount={1}
-                name="logo"
-                action="//jsonplaceholder.typicode.com/posts/"
+                customRequest={dummyRequest}
+                onChange={handleChange}
+                showUploadList={false}
                 accept=".doc, .docx, .pdf">
                 <Button icon={<UploadOutlined />}>Click to upload</Button>
               </Upload>

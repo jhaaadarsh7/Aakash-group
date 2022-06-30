@@ -7,14 +7,21 @@ import {
 } from "@ant-design/icons";
 import { Form, Input, Button, Row, Col } from "antd";
 import React, { useEffect } from "react";
+import { aakashapi } from "../api/aakashapi";
 
 const ContactPage = () => {
   useEffect(() => {
     document.title = "Aakash Group | Contact Us";
   }, []);
 
-  const onFinish = (values) => {
-    values = { ...values, ...{ subject: "contact" } };
+  const onFinish = async (values) => {
+    values = { ...values, ...{ subject: "Contact Form", aakashform: "true" } };
+    const result = await aakashapi.post("/", values, {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
+    console.log(result);
   };
 
   const onFinishFailed = (errorInfo) => {
