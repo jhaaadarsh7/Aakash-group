@@ -8,6 +8,7 @@ import {
 import { Form, Input, Button, Row, Col } from "antd";
 import React, { useEffect } from "react";
 import { aakashapi } from "../api/aakashapi";
+import { NotificationManager } from "react-notifications";
 
 const ContactPage = () => {
   useEffect(() => {
@@ -16,12 +17,16 @@ const ContactPage = () => {
 
   const onFinish = async (values) => {
     values = { ...values, ...{ subject: "Contact Form", aakashform: "true" } };
-    const result = await aakashapi.post("/", values, {
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    });
-    console.log(result);
+    try {
+      const response = await aakashapi.post("/", values, {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
+      NotificationManager.sucess("Sucess", "We will get back to you shortly");
+    } catch (e) {
+      NotificationManager.error("Error", "Error submitting form");
+    }
   };
 
   const onFinishFailed = (errorInfo) => {

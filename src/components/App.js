@@ -17,10 +17,12 @@ import HospitalityHotel from "./industries/HospitalityHotel";
 import CareerDetailPage from "./career/CareerDetailPage";
 import DataAnalyst from "./career/DataAnalyst";
 import GraphicDesigner from "./career/GraphicDesigner";
+import { NotificationContainer } from "react-notifications";
 
 function App() {
   return (
     <Router>
+      <NotificationContainer />
       <Header />
       <Routes>
         <Route exact path="/" element={<HomePage />} />

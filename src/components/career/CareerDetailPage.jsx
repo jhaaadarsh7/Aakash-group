@@ -3,6 +3,7 @@ import { ClockCircleOutlined, LaptopOutlined } from "@ant-design/icons";
 import { Form, Input, Button, Upload, message } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import { aakashapi } from "./../api/aakashapi";
+import { NotificationManager } from "react-notifications";
 
 const CareerDetailPage = ({ careerDetails }) => {
   const [imageUrl, setImageUrl] = useState();
@@ -26,8 +27,9 @@ const CareerDetailPage = ({ careerDetails }) => {
     }
     try {
       const response = await aakashapi.post("", formData);
-      console.log("success");
+      NotificationManager.sucess("Sucess", "We will get back to you shortly");
     } catch (e) {
+      NotificationManager.error("Error", "Error submitting form");
       console.log(e);
     }
   };
