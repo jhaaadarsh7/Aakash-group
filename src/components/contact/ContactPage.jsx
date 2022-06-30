@@ -11,21 +11,25 @@ import { aakashapi } from "../api/aakashapi";
 import { NotificationManager } from "react-notifications";
 
 const ContactPage = () => {
+  const [form] = Form.useForm();
+
   useEffect(() => {
     document.title = "Aakash Group | Contact Us";
   }, []);
 
   const onFinish = async (values) => {
     values = { ...values, ...{ subject: "Contact Form", aakashform: "true" } };
+    const formData = new FormData();
+    for (const name in values) {
+      formData.append(name, values[name]);
+    }
     try {
-      const response = await aakashapi.post("", values, {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      });
+      const response = await aakashapi.post("", formData);
       NotificationManager.success("Success", "We will get back to you shortly");
+      form.resetFields();
     } catch (e) {
       NotificationManager.error("Error", "Error submitting form");
+      form.resetFields();
     }
   };
 
@@ -45,6 +49,7 @@ const ContactPage = () => {
         <div className="content">
           <Form
             name="contact"
+            form={form}
             labelCol={{ span: 0 }}
             wrapperCol={{ span: 24 }}
             onFinish={onFinish}

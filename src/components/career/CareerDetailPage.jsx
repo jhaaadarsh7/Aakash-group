@@ -6,6 +6,7 @@ import { aakashapi } from "./../api/aakashapi";
 import { NotificationManager } from "react-notifications";
 
 const CareerDetailPage = ({ careerDetails }) => {
+  const [form] = Form.useForm();
   const [imageUrl, setImageUrl] = useState();
 
   const getBase64 = (img, callback) => {
@@ -29,6 +30,7 @@ const CareerDetailPage = ({ careerDetails }) => {
     try {
       const response = await aakashapi.post("", formData);
       NotificationManager.success("Success", "We will get back to you shortly");
+      form.resetFields();
     } catch (e) {
       NotificationManager.error("Error", "Error submitting form");
       console.log(e);
@@ -98,6 +100,7 @@ const CareerDetailPage = ({ careerDetails }) => {
           <div className="heading">Application Form</div>
           <Form
             name="basic"
+            form={form}
             layout="vertical"
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 16 }}
