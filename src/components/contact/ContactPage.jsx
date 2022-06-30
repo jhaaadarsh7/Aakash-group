@@ -14,7 +14,7 @@ const ContactPage = () => {
   }, []);
 
   const onFinish = (values) => {
-    console.log("Success:", values);
+    values = { ...values, ...{ subject: "contact" } };
   };
 
   const onFinishFailed = (errorInfo) => {
