@@ -23,7 +23,7 @@ const ContactPage = () => {
           "Content-Type": "application/x-www-form-urlencoded",
         },
       });
-      NotificationManager.sucess("Sucess", "We will get back to you shortly");
+      NotificationManager.success("Success", "We will get back to you shortly");
     } catch (e) {
       NotificationManager.error("Error", "Error submitting form");
     }

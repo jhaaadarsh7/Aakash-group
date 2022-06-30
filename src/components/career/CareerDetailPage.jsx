@@ -27,7 +27,7 @@ const CareerDetailPage = ({ careerDetails }) => {
     }
     try {
       const response = await aakashapi.post("", formData);
-      NotificationManager.sucess("Sucess", "We will get back to you shortly");
+      NotificationManager.success("Success", "We will get back to you shortly");
     } catch (e) {
       NotificationManager.error("Error", "Error submitting form");
       console.log(e);
@@ -152,7 +152,7 @@ const CareerDetailPage = ({ careerDetails }) => {
                 maxCount={1}
                 customRequest={dummyRequest}
                 onChange={handleChange}
-                showUploadList={false}
+                showUploadList={true}
                 accept=".doc, .docx, .pdf">
                 <Button icon={<UploadOutlined />}>Click to upload</Button>
               </Upload>
