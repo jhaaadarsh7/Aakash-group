@@ -19,6 +19,7 @@ const CareerDetailPage = ({ careerDetails }) => {
       ...values,
       aakashform: "true",
       subject: "Contact Form",
+      jobTitle: careerDetails.title,
     };
     const formData = new FormData();
     console.log(values.resume);

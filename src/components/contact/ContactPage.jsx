@@ -18,7 +18,7 @@ const ContactPage = () => {
   const onFinish = async (values) => {
     values = { ...values, ...{ subject: "Contact Form", aakashform: "true" } };
     try {
-      const response = await aakashapi.post("/", values, {
+      const response = await aakashapi.post("", values, {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
