@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRightIcon, CheckCircleIcon, StarIcon, PhoneIcon, EnvelopeIcon, BuildingOfficeIcon, TruckIcon, HomeIcon, CogIcon, BoltIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 import hero from '../../assets/images/Aakash.png';
+import { Link } from 'react-router-dom';
 
 const IndustriesPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -277,14 +278,14 @@ const IndustriesPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto sm:max-w-none">
-            <button className="group inline-flex items-center justify-center bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+            <Link to="/contact" className="group inline-flex items-center justify-center bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
               <PhoneIcon className="w-5 h-5 mr-2" />
               Contact Us Today
-            </button>
-            <button className="group inline-flex items-center justify-center border-2 border-white/50 hover:border-white hover:bg-white/10 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm">
+            </Link>
+            <Link to="/contact" className="group inline-flex items-center justify-center border-2 border-white/50 hover:border-white hover:bg-white/10 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm">
               <EnvelopeIcon className="w-5 h-5 mr-2" />
               Request Quote
-            </button>
+            </Link>
           </div>
         </div>
       </div>

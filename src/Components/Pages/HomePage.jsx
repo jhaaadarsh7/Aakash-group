@@ -56,7 +56,7 @@ const HomePage = () => {
                 </Link>
                 
                 <Link 
-                  to="/services"
+                  to="/industries"
                   className="group inline-flex items-center justify-center border-2 border-white/50 hover:border-white hover:bg-white/10 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 backdrop-blur-sm"
                 >
                   Our Services
@@ -235,7 +235,7 @@ const HomePage = () => {
               Contact Us
             </Link>
             <Link 
-              to="/services"
+              to="/industries"
               className="group border-2 border-white/60 hover:border-white text-white hover:bg-white/10 px-6 sm:px-10 py-3 sm:py-5 rounded-full font-semibold text-sm sm:text-lg transition-all duration-300 backdrop-blur-sm w-auto sm:w-auto flex items-center justify-center"
             >
               Explore Our Services
