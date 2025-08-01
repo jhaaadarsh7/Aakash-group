@@ -7,6 +7,7 @@ import {
   BriefcaseIcon,
   ClockIcon,
   UserGroupIcon,
+  XMarkIcon
 } from "@heroicons/react/24/outline";
 import hero from "../../assets/images/Aakash.png";
 
@@ -17,6 +18,21 @@ const CareerPage = () => {
   const [jobsVisible, setJobsVisible] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showApplicationModal, setShowApplicationModal] = useState(false);
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    address: "",
+    resume: null,
+    aakashform: true,
+    subject: "Job Application from Aakash Group",
+    jobTitle: ""
+  });
+  const [resumeError, setResumeError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -37,10 +53,256 @@ const CareerPage = () => {
     fetchJobs();
   }, []);
 
-  // Scroll to top on job detail open
   useEffect(() => {
-    if (selectedJob) window.scrollTo(0, 0);
+    if (selectedJob) {
+      window.scrollTo(0, 0);
+      setFormData(prev => ({
+        ...prev,
+        jobTitle: selectedJob.Title || selectedJob.Tittle
+      }));
+    }
   }, [selectedJob]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleFileChange = (e) => {
+    setFormData(prev => ({ ...prev, resume: e.target.files[0] }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!formData.resume) {
+    setResumeError(true);
+    return;
+  }
+  
+  setIsSubmitting(true);
+
+    setIsSubmitting(true);
+    
+    const formPayload = new FormData();
+    for (const key in formData) {
+      if (formData[key] !== null) {
+        formPayload.append(key, formData[key]);
+      }
+    }
+
+    try {
+      const response = await fetch("https://www.aakash.group/mail.php", {
+        method: "POST",
+        body: formPayload
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        // Reset form after successful submission
+        setFormData({
+          firstname: "",
+          lastname: "",
+          email: "",
+          phone: "",
+          address: "",
+          resume: null,
+          aakashform: true,
+          subject: "Job Application from Aakash Group",
+          jobTitle: selectedJob?.Title || selectedJob?.Tittle || ""
+        });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const ApplicationModal = () => (
+    <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+        <div className="p-8">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">
+              Apply for {selectedJob?.Title || selectedJob?.Tittle}
+            </h2>
+            <button 
+              onClick={() => {
+                setShowApplicationModal(false);
+                setSubmitStatus(null);
+              }}
+              className="text-gray-500 hover:text-gray-700"
+            >
+              <XMarkIcon className="w-8 h-8" />
+            </button>
+          </div>
+
+          {submitStatus === "success" ? (
+            <div className="text-center py-10">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Application Submitted!</h3>
+              <p className="text-gray-600">
+                Thank you for applying to Aakash Group. We'll review your application and contact you soon.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    First Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="firstname"
+                    value={formData.firstname}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Last Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="lastname"
+                    value={formData.lastname}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone *
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Address *
+                </label>
+                <input
+                  type="text"
+                  name="address"
+                  value={formData.address}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                />
+              </div>
+           <div>
+  <label className="block text-sm font-medium text-gray-700 mb-1">
+    Upload Resume (PDF, DOC) *
+  </label>
+  <div className="flex items-center">
+    <label className={`flex flex-col items-center justify-center w-full h-32 border-2 ${
+      resumeError ? "border-red-500" : "border-gray-300"
+    } border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition`}>
+      <div className="flex flex-col items-center justify-center pt-5 pb-6">
+        <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+        </svg>
+        <p className="text-sm text-gray-500 mt-2">
+          <span className="font-semibold">Click to upload</span> or drag and drop
+        </p>
+        <p className="text-xs text-gray-500">
+          PDF or DOC (MAX. 5MB)
+        </p>
+      </div>
+      <input 
+        type="file" 
+        name="resume"
+        onChange={(e) => {
+          handleFileChange(e);
+          setResumeError(false);
+        }}
+        accept=".pdf,.doc,.docx"
+        className="hidden" 
+      />
+    </label>
+  </div>
+  
+  {resumeError && (
+    <p className="mt-2 text-sm text-red-600">
+      Please upload your resume
+    </p>
+  )}
+  
+  {formData.resume && !resumeError && (
+    <p className="mt-2 text-sm text-gray-600">
+      Selected file: {formData.resume.name}
+    </p>
+  )}
+</div>
+              
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                    isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:shadow-xl"
+                  }`}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Submitting...
+                    </>
+                  ) : (
+                    "Submit Application"
+                  )}
+                </button>
+                
+                {submitStatus === "error" && (
+                  <p className="mt-3 text-center text-red-600">
+                    Error submitting application. Please try again.
+                  </p>
+                )}
+              </div>
+            </form>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 
   if (selectedJob) {
     return (
@@ -146,19 +408,19 @@ const CareerPage = () => {
                   </div>
                   <button
                     className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center"
-                    disabled
+                    onClick={() => setShowApplicationModal(true)}
                   >
                     Apply Now
                     <ArrowRightIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
-                <p className="text-xs text-gray-500 mt-2 text-center sm:text-right">
-                  Application form coming soon
-                </p>
               </div>
             </div>
           </div>
         </div>
+        
+        {/* Application Modal */}
+        {showApplicationModal && <ApplicationModal />}
       </div>
     );
   }
