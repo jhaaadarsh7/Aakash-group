@@ -225,22 +225,39 @@ const Header = () => {
               <div className="px-4 pt-6 pb-6 space-y-3">
                 {navLinks.map((link) => {
                   if (link.isDropdown) {
-                    // Mobile Industries Section
+                    // Mobile Industries Section - Fixed
                     return (
                       <div key={link.name} className="space-y-3">
-                        <button
-                          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                          className={`${
-                            scrolled 
-                              ? 'text-white hover:text-blue-400 hover:bg-gradient-to-r hover:from-blue-900/50 hover:to-indigo-900/50' 
-                              : 'text-gray-800 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
-                          } w-full text-left px-6 py-4 rounded-2xl text-xl font-semibold flex items-center justify-between transition-all duration-300`}
-                        >
-                          {link.name}
-                          <ChevronDown className={`h-6 w-6 transition-all duration-500 ${
-                            isDropdownOpen ? 'rotate-180 text-blue-400' : ''
-                          }`} />
-                        </button>
+                        <div className="flex">
+                          {/* Main Industries Link */}
+                          <a
+                            href={link.path}
+                            className={`${
+                              scrolled 
+                                ? 'text-white hover:text-blue-400 hover:bg-gradient-to-r hover:from-blue-900/50 hover:to-indigo-900/50' 
+                                : 'text-gray-800 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                            } flex-1 px-6 py-4 rounded-l-2xl text-xl font-semibold transition-all duration-300`}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {link.name}
+                          </a>
+                          
+                          {/* Dropdown Toggle Button */}
+                          <button
+                            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                            className={`${
+                              scrolled 
+                                ? 'text-white hover:text-blue-400 hover:bg-gradient-to-r hover:from-blue-900/50 hover:to-indigo-900/50' 
+                                : 'text-gray-800 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                            } px-4 py-4 rounded-r-2xl transition-all duration-300 border-l ${
+                              scrolled ? 'border-gray-600/50' : 'border-gray-200/50'
+                            }`}
+                          >
+                            <ChevronDown className={`h-6 w-6 transition-all duration-500 ${
+                              isDropdownOpen ? 'rotate-180 text-blue-400' : ''
+                            }`} />
+                          </button>
+                        </div>
                         
                         {isDropdownOpen && (
                           <div className="ml-6 space-y-2 animate-in slide-in-from-left duration-300">
