@@ -42,6 +42,7 @@ import IndustriesPage from './Components/Pages/IndustriesPage'
 import Login from './Components/Login'
 import ProtectedRoute from './Components/ProtectedRoute'
 import DashBoardPage from './Components/Pages/DashBoardPage'
+import CarrerPage from './Components/Pages/CarrerPage'
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
           <Route path="/about" element={<AboutPage/>} />
           <Route path="/contact" element={<ContactPage/>} />
           <Route path='/industries' element={<IndustriesPage/>} />
+          <Route path="/careers" element={<CarrerPage/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/dashboard' element={<ProtectedRoute><DashBoardPage/></ProtectedRoute>} />
         </Routes>
