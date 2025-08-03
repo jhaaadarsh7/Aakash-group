@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
@@ -9,7 +10,6 @@ import {
   ArrowRightIcon,
   ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';
-import { useState } from "react";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -19,21 +19,43 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-const handleLogin = async (e) => {
-  e.preventDefault();
-  setError(null);
-  setLoading(true);
+  // Check token expiration globally for the app (2 hours = 7200000 ms)
+  useEffect(() => {
+    const checkTokenExpiry = () => {
+      const loginTime = localStorage.getItem("loginTime");
+      if (loginTime && Date.now() - Number(loginTime) > 7200000) {
+        // Session expired, log out the user
+        auth.signOut();
+        localStorage.removeItem("loginTime");
+        navigate("/login");
+      }
+    };
 
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-    navigate("/dashboard");
-  } catch (err) {
-    setError("Invalid email or password. Please try again.");
-  } finally {
-    setLoading(false);
-  }
-};
+    // Check on mount
+    checkTokenExpiry();
 
+    // Check periodically every minute
+    const interval = setInterval(checkTokenExpiry, 60000);
+
+    return () => clearInterval(interval);
+  }, [navigate]);
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setError(null);
+    setLoading(true);
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      // Store login time in localStorage
+      localStorage.setItem("loginTime", Date.now());
+      navigate("/dashboard");
+    } catch (err) {
+      setError("Invalid email or password. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center p-4">
