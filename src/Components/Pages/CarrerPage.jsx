@@ -9,6 +9,7 @@ import {
 import hero from "../../assets/images/Aakash.png";
 import { useCallback, useEffect, useState } from "react";
 import JobApplicationForm from "./JobApplicationForm";
+import { Link } from "react-router-dom";
 
 const CareerPage = () => {
   const [jobs, setJobs] = useState([]);
@@ -26,7 +27,8 @@ const CareerPage = () => {
         const q = query(collection(db, "jobs"), orderBy("created", "desc"));
         const querySnapshot = await getDocs(q);
         setJobs(querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-        setTimeout(() => setJobsVisible(true), 300);
+        // Change delay to 1 second instead of 300ms
+        setTimeout(() => setJobsVisible(true), 1000);
         setLoading(false);
       } catch (err) {
         console.error("Failed to fetch jobs:", err);
@@ -225,10 +227,12 @@ const CareerPage = () => {
                   Learn About Us
                   <ArrowRightIcon className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
-                <div className="group inline-flex items-center justify-center border-2 border-white/50 hover:border-white hover:bg-white/10 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 backdrop-blur-sm cursor-pointer">
-                  Our Services
-                  <ArrowRightIcon className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                </div>
+                <Link to="/industries">
+                  <div className="group inline-flex items-center justify-center border-2 border-white/50 hover:border-white hover:bg-white/10 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 backdrop-blur-sm cursor-pointer">
+                    Our Services
+                    <ArrowRightIcon className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -236,7 +240,7 @@ const CareerPage = () => {
       </div>
       {/* Jobs Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className={`transform transition-all duration-1000 delay-300 ${jobsVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+        <div className={`transform transition-all duration-1000 delay-100 ${jobsVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Current Openings
           </h2>

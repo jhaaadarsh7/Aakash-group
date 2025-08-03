@@ -60,21 +60,7 @@ const handleCareersClick = () => {
                 For over a century, Aakash Group has been shaping lives across diverse industries with unwavering commitment to trust, quality, and community upliftment.
               </p>
               
-              {/* Stats Cards */}
-              <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl mb-6 sm:mb-8">
-                {[
-                  { number: '150+', label: 'Years Legacy' },
-                  { number: '7+', label: 'Industries' },
-                  { number: '1000+', label: 'Lives Impacted' }
-                ].map((stat, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 lg:p-6 rounded-2xl text-center hover:bg-white/20 transition-all duration-300">
-                    <div className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-1">
-                      {stat.number}
-                    </div>
-                    <div className="text-xs sm:text-sm text-blue-200 font-medium">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
+           
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md sm:max-w-none">

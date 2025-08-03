@@ -18,7 +18,7 @@ const IndustriesPage = () => {
       icon: BuildingOfficeIcon,
       features: ["Smart Building Solutions", "Sustainable Construction", "Project Management", "Quality Assurance"],
       image: "https://www.aakash.group/static/media/angan-logo.f0df8c14.png",
-      url: "https://construction.aakashgroup.com"
+      url: "https://angansweets.com/"
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const IndustriesPage = () => {
       icon: TruckIcon,
       features: ["Supply Chain Management", "Fleet Management", "Warehousing Solutions", "Last-Mile Delivery"],
       image: "https://www.aakash.group/static/media/aakashlabs-logo.7b7d7b96.png",
-      url: "https://logistics.aakashgroup.com" 
+      url: "https://aakashlabs.com/" 
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const IndustriesPage = () => {
       icon: HomeIcon,
       features: ["Residential Projects", "Commercial Spaces", "Property Management", "Investment Opportunities"],
       image: "https://www.aakash.group/static/media/aakash-capital-logo.2b32b416.png",
-      url: "https://realestate.aakashgroup.com"
+      url: "https://aakashcapital.com.np/"
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ const IndustriesPage = () => {
       icon: CogIcon,
       features: ["Precision Manufacturing", "Quality Control", "Custom Solutions", "R&D Innovation"],
       image: "https://www.aakash.group/static/media/siddhartha-logo.054b8d9d.png",
-      url: "https://manufacturing.aakashgroup.com" 
+      url: "https://siddharthapremier.com.np/" 
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ const IndustriesPage = () => {
       icon: BoltIcon,
       features: ["Renewable Energy", "Power Distribution", "Energy Efficiency", "Grid Solutions"],
       image: "https://www.aakash.group/static/media/reliance-logo.4cbd08a2.png",
-      url: "https://energy.aakashgroup.com" 
+      url: "https://www.reliancegeneral.co.in/" 
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ const IndustriesPage = () => {
       icon: ShieldCheckIcon,
       features: ["Security Systems", "Safety Protocols", "Risk Management", "Emergency Response"],
       image: "https://www.aakash.group/static/media/mahalaxmi-logo.27be1450.png",
-      url: "https://security.aakashgroup.com" 
+      url: "/industries" 
     }
   ];
 
