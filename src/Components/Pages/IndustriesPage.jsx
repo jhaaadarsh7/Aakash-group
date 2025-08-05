@@ -11,61 +11,91 @@ const IndustriesPage = () => {
   }, []);
 
   const industries = [
-    {
-      id: 1,
-      title: "Construction & Infrastructure",
-      description: "Leading construction solutions with cutting-edge technology and sustainable practices for residential, commercial, and industrial projects.",
-      icon: BuildingOfficeIcon,
-      features: ["Smart Building Solutions", "Sustainable Construction", "Project Management", "Quality Assurance"],
-      image: "https://www.aakash.group/static/media/angan-logo.f0df8c14.png",
-      url: "https://angansweets.com/"
-    },
-    {
-      id: 2,
-      title: "Logistics & Transportation",
-      description: "Comprehensive logistics solutions ensuring efficient supply chain management and timely delivery across the nation.",
-      icon: TruckIcon,
-      features: ["Supply Chain Management", "Fleet Management", "Warehousing Solutions", "Last-Mile Delivery"],
-      image: "https://www.aakash.group/static/media/aakashlabs-logo.7b7d7b96.png",
-      url: "https://aakashlabs.com/" 
-    },
-    {
-      id: 3,
-      title: "Real Estate Development",
-      description: "Premium real estate developments that redefine living standards with modern amenities and strategic locations.",
-      icon: HomeIcon,
-      features: ["Residential Projects", "Commercial Spaces", "Property Management", "Investment Opportunities"],
-      image: "https://www.aakash.group/static/media/aakash-capital-logo.2b32b416.png",
-      url: "https://aakashcapital.com.np/"
-    },
-    {
-      id: 4,
-      title: "Manufacturing & Engineering",
-      description: "Advanced manufacturing capabilities with precision engineering and innovative solutions for diverse industrial needs.",
-      icon: CogIcon,
-      features: ["Precision Manufacturing", "Quality Control", "Custom Solutions", "R&D Innovation"],
-      image: "https://www.aakash.group/static/media/siddhartha-logo.054b8d9d.png",
-      url: "https://siddharthapremier.com.np/" 
-    },
-    {
-      id: 5,
-      title: "Energy & Power",
-      description: "Sustainable energy solutions driving the future with renewable technologies and efficient power management systems.",
-      icon: BoltIcon,
-      features: ["Renewable Energy", "Power Distribution", "Energy Efficiency", "Grid Solutions"],
-      image: "https://www.aakash.group/static/media/reliance-logo.4cbd08a2.png",
-      url: "https://www.reliancegeneral.co.in/" 
-    },
-    {
-      id: 6,
-      title: "Security & Safety",
-      description: "Comprehensive security solutions protecting assets, people, and operations with state-of-the-art technology.",
-      icon: ShieldCheckIcon,
-      features: ["Security Systems", "Safety Protocols", "Risk Management", "Emergency Response"],
-      image: "https://www.aakash.group/static/media/mahalaxmi-logo.27be1450.png",
-      url: "/industries" 
-    }
-  ];
+  {
+    id: 1,
+    title: "Aakash Foods",
+    description:
+      "A leading name in Nepal's food industry, delivering a wide variety of traditional sweets, snacks, and food products with consistent quality and taste.",
+    features: [
+      "Traditional Sweets & Snacks",
+      "Hygienic Food Production",
+      "Nationwide Distribution",
+      "Customer-Centric Innovation"
+    ],
+    image: "https://www.aakash.group/static/media/angan-logo.f0df8c14.png",
+    url: "https://angansweets.com/"
+  },
+  {
+    id: 2,
+    title: "Aakash Labs",
+    description:
+      "A full-service digital marketing and creative agency specializing in branding, design, SEO, and online marketing solutions.",
+    features: [
+      "Digital Marketing",
+      "SEO & Content Strategy",
+      "Branding & Design",
+      "Performance Campaigns"
+    ],
+    image: "https://www.aakash.group/static/media/aakashlabs-logo.7b7d7b96.png",
+    url: "https://aakashlabs.com/"
+  },
+  {
+    id: 3,
+    title: "Aakash Capital Ltd.",
+    description:
+      "A real estate investment and development firm focused on building residential and commercial projects across prime locations.",
+    features: [
+      "Real Estate Development",
+      "Property Investment",
+      "Project Management",
+      "Commercial & Residential Sales"
+    ],
+    image: "https://www.aakash.group/static/media/aakash-capital-logo.2b32b416.png",
+    url: "https://aakashcapital.com.np/"
+  },
+  {
+    id: 4,
+    title: "Siddhartha Insurance Ltd.",
+    description:
+      "A trusted provider of general insurance services offering a wide range of policies for health, motor, property, and corporate risk management.",
+    features: [
+      "Health & Motor Insurance",
+      "Corporate Insurance Solutions",
+      "Quick Claim Settlement",
+      "24/7 Customer Support"
+    ],
+    image: "https://www.aakash.group/static/media/siddhartha-logo.054b8d9d.png",
+    url: "https://siddharthapremier.com.np/"
+  },
+  {
+    id: 5,
+    title: "Reliance Life Insurance Ltd.",
+    description:
+      "A prominent life insurance company providing flexible and affordable life insurance products to secure your family's future.",
+    features: [
+      "Life Insurance Policies",
+      "Retirement & Pension Plans",
+      "Savings & Investment Options",
+      "Policy Customization"
+    ],
+    image: "https://www.aakash.group/static/media/reliance-logo.4cbd08a2.png",
+    url: "https://www.reliancegeneral.co.in/"
+  },
+  {
+    id: 6,
+    title: "Mahalaxmi Complex Pvt. Ltd.",
+    description:
+      "A multipurpose commercial complex offering premium office and retail spaces along with integrated facilities management services.",
+    features: [
+      "Commercial Rentals",
+      "Facility Management",
+      "Retail & Office Space",
+      "Strategic Location"
+    ],
+    image: "https://www.aakash.group/static/media/mahalaxmi-logo.27be1450.png",
+    url: "/industries"
+  }
+];
 
  
 
@@ -160,13 +190,7 @@ const IndustriesPage = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                   
-                  {/* Industry Icon */}
-                  <div className="absolute top-4 left-4">
-                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                      <industry.icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-
+                
                   {/* Hover Arrow */}
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
