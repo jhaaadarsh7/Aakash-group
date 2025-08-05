@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, Menu, X, Phone, Mail } from 'lucide-react';
 import logo from "../../assets/images/LOGO.png";
@@ -73,7 +71,7 @@ const Header = () => {
         <div className={`flex justify-between items-center transition-all duration-500 ${scrolled ? 'h-20 lg:h-24' : 'h-24 lg:h-28'}`}>
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center group relative">
+            <Link to="/" className="flex items-center group relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-100/50 to-indigo-100/50 rounded-full opacity-0 transition-all duration-500 blur-sm"></div>
               <img
                 src={logo}
@@ -148,7 +146,7 @@ const Header = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative flex items-center bg-gradient-to-r from-green-600 via-emerald-700 to-teal-600 text-white px-6 py-3 rounded-full transition-all duration-500 shadow-2xl transform hover:scale-105 group">
                 <Mail className="h-4 w-4 mr-2 group-hover:animate-bounce" />
-                <Link href="mailto:info@aakash.group" className="text-sm font-bold tracking-wide">Email Us</Link>
+                <a href="mailto:info@aakash.group" className="text-sm font-bold tracking-wide">Email Us</a>
               </div>
             </div>
 
@@ -156,19 +154,19 @@ const Header = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative flex items-center bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 text-white px-6 py-3 rounded-full transition-all duration-500 shadow-2xl transform hover:scale-105 group">
                 <Phone className="h-4 w-4 mr-2 group-hover:animate-bounce" />
-                <Link href="tel:01-4430196" className="text-sm font-bold tracking-wide">01-4430196</Link>
+                <a href="tel:01-4430196" className="text-sm font-bold tracking-wide">01-4430196</a>
               </div>
             </div>
           </div>
 
           {/* Mobile Controls */}
           <div className="lg:hidden flex items-center space-x-3">
-            <Link href="mailto:info@aakash.group" className={`flex items-center ${scrolled ? 'text-white' : 'text-green-600'} hover:text-green-400 p-2 rounded-full hover:bg-green-50/10 transition-all duration-300 transform hover:scale-110`}>
+            <a href="mailto:info@aakash.group" className={`flex items-center ${scrolled ? 'text-white' : 'text-green-600'} hover:text-green-400 p-2 rounded-full hover:bg-green-50/10 transition-all duration-300 transform hover:scale-110`}>
               <Mail className="h-5 w-5" />
-            </Link>
-            <Link href="tel:01-4430196" className={`flex items-center ${scrolled ? 'text-white' : 'text-blue-600'} hover:text-blue-400 p-2 rounded-full hover:bg-blue-50/10 transition-all duration-300 transform hover:scale-110`}>
+            </a>
+            <a href="tel:01-4430196" className={`flex items-center ${scrolled ? 'text-white' : 'text-blue-600'} hover:text-blue-400 p-2 rounded-full hover:bg-blue-50/10 transition-all duration-300 transform hover:scale-110`}>
               <Phone className="h-5 w-5" />
-            </Link>
+            </a>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`${scrolled ? 'text-white hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'} focus:outline-none transition-all duration-300 p-3 rounded-xl hover:bg-blue-50/10 transform hover:scale-110`}
