@@ -474,7 +474,7 @@ const HomePage = () => {
         {/* Enhanced Call to Action Section with ScrollTrigger Animation */}
         <section 
           ref={ctaRef}
-          className="py-12 sm:py-16 lg:py-20 bg-[#1e5b6c] relative overflow-hidden"
+          className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-700 to-blue-400 relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/10" />
           
