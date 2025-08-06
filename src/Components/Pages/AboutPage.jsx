@@ -315,7 +315,7 @@ const handleCareersClick = () => {
 </section>
 
       {/* Careers Section */}
-      <section id="careers" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 relative overflow-hidden">
+      <section id="careers" className="py-16 sm:py-20 lg:py-24 bg-[#1e5b6c] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/10" />
         
         {/* Animated Background Elements */}

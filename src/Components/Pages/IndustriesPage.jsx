@@ -292,7 +292,7 @@ const IndustriesPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div id="contact-section" className="bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 py-16 sm:py-20">
+      <div id="contact-section" className="bg-[#1e5b6c] py-16 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Industry?
