@@ -349,14 +349,14 @@ const HomePage = () => {
             ref={ctaTitleRef}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
           >
-            Ready to Create Something
+           Explore Our Industry
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-              Extraordinary with us?
+              Verticals
             </span>
           </h2>
 
           {/* CTA Subtitle - Animated */}
-          <p
+          {/* <p
             ref={ctaSubtitleRef}
             className="text-base sm:text-lg lg:text-xl xl:text-2xl text-blue-100 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed"
           >
@@ -367,7 +367,7 @@ const HomePage = () => {
             infrastructure, our expertise, innovation, and integrity turn
             visions into reality. Join the many partners and customers who trust
             us to deliver excellence every single time.
-          </p>
+          </p> */}
 
           {/* Enhanced CTA Buttons - Animated */}
           <div
@@ -385,7 +385,7 @@ const HomePage = () => {
               href="/industries"
               className="group border-2 border-white/60 hover:border-white text-white hover:bg-white/10 px-6 sm:px-10 py-3 sm:py-5 rounded-full font-semibold text-sm sm:text-lg transition-all duration-300 backdrop-blur-sm w-auto sm:w-auto flex items-center justify-center"
             >
-              Explore Our Verticles
+              Explore Our Verticals
               <ArrowRightIcon className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>

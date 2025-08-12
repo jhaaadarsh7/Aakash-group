@@ -232,6 +232,21 @@ const IndustriesPage = () => {
     //     snacks,
     //   url: "/industries",
     // },
+    //  {
+    //   id: 8,
+    //   title: "BnBKTM Pvt. Ltd.",
+    //   description:
+    //   "BNB KTM is your gateway to exceptional short-term and long-term apartment rentals in Kupondole, Lalitpur.",
+    //   features: [
+    //     "Wide Range of Apartment Options",
+    //     "Flexible Rental Terms",
+    //     "Fully Furnished Units",
+    //     "Prime Location in Kupondole",
+    //   ],
+    //   image:
+    //     snacks,
+    //   url: "/industries",
+    // },
     
   ];
 

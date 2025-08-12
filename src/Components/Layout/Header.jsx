@@ -22,7 +22,8 @@ const industries = [
   { name: "Food And Beverages", path: "/industries" },
   { name: "Information And Technology", path: "/industries" },
   { name: "Banking", path: "/industries" },
-  { name: "Promoter Of Insurance Companies", path: "/industries" },
+  { name: "General Insurance", path: "/industries" },
+  { name: "Life Insurance", path: "/industries" },
   { name: "Real Estate", path: "/industries" },
 ];
 
