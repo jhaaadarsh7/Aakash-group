@@ -217,36 +217,37 @@ const IndustriesPage = () => {
         "https://www.aakash.group/static/media/mahalaxmi-logo.27be1450.png",
       url: "/industries",
     },
-    //  {
-    //   id: 7,
-    //   title: "Aakash Snacks Pvt. Ltd.",
-    //   description:
-    //     "A leading player in the snacks industry, offering a diverse range of high-quality snacks that cater to all taste preferences.",
-    //   features: [
-    //     "Wide Range of Snacks",
-    //     "Quality Ingredients",
-    //     "Innovative Flavors",
-    //     "Sustainable Packaging",
-    //   ],
-    //   image:
-    //     snacks,
-    //   url: "/industries",
-    // },
-    //  {
-    //   id: 8,
-    //   title: "BnBKTM Pvt. Ltd.",
-    //   description:
-    //   "BNB KTM is your gateway to exceptional short-term and long-term apartment rentals in Kupondole, Lalitpur.",
-    //   features: [
-    //     "Wide Range of Apartment Options",
-    //     "Flexible Rental Terms",
-    //     "Fully Furnished Units",
-    //     "Prime Location in Kupondole",
-    //   ],
-    //   image:
-    //     snacks,
-    //   url: "/industries",
-    // },
+     {
+      id: 7,
+      title: "Aakash Snacks Pvt. Ltd.",
+      description:
+        "A leading player in the snacks industry, offering a diverse range of high-quality snacks that cater to all taste preferences.",
+      features: [
+        "Wide Range of Snacks",
+        "Quality Ingredients",
+        "Innovative Flavors",
+        "Sustainable Packaging",
+      ],
+      image:
+        snacks,
+      url: "/industries",
+    },
+     {
+      id: 8,
+      title: "BnBKTM Pvt. Ltd.",
+      description:
+      "BNB KTM is your gateway to exceptional short-term and long-term apartment rentals in Kupondole, Lalitpur.",
+      features: [
+        "Wide Range of Apartment Options",
+        "Flexible Rental Terms",
+        "Fully Furnished Units",
+        "Prime Location in Kupondole",
+      ],
+      image:
+        "https://bnbktm.com/bnblogo.png",
+      url: "/industries",
+    },
+  
     
   ];
 
