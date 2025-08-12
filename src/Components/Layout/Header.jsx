@@ -186,13 +186,13 @@ const industries = [
                   return (
                     <div key={link.name} className="space-y-3">
                       <div className="flex">
-                        <Link
-                          to={link.path}
+                        <a
+                          href={link.path}
                           className={`${scrolled ? 'text-white' : 'text-gray-800'} flex-1 px-6 py-4 rounded-l-2xl text-xl font-semibold transition-all duration-300`}
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {link.name}
-                        </Link>
+                        </a>
                         <button
                           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                           className={`px-4 py-4 rounded-r-2xl transition-all duration-300 border-l ${scrolled ? 'border-gray-600/50 text-white' : 'border-gray-200/50 text-gray-800'}`}
