@@ -19,13 +19,11 @@ import {
   ShieldCheckIcon,
 } from "@heroicons/react/24/outline";
 
-import first from "../../assets/images/1.png";
 import second from "../../assets/images/5.png";
 import third from "../../assets/images/4.png";
 import fourth from "../../assets/images/6.png";
 import MD from "../../assets/images/md.jpg";
-
-import { Link } from "react-router-dom";
+import hero from "../../assets/images/Aakash.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

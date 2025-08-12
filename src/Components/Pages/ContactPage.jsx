@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 
-import hero from '../../assets/images/aakash.png'
+import hero from '../../assets/images/Aakash.png'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -123,7 +123,6 @@ const ContactPage = () => {
       <div className="relative overflow-hidden h-[46vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[85vh] 2xl:h-screen">
         <img
           src={hero}
-          // src={contact}
           alt="Aakash Group"
           className="w-full h-full object-cover filter brightness-95 md:hidden"
           style={{ objectPosition: 'center 60%' }}
@@ -133,7 +132,6 @@ const ContactPage = () => {
                  className="hidden md:block absolute inset-0 w-full h-full "
                  style={{
                    backgroundImage: `url(${hero})`,
-                  //  backgroundImage: `url(${contact})`,
                    backgroundPositionY: ' 25%',
                    backgroundAttachment: 'fixed',
                    backgroundPosition: 'center 60%',
