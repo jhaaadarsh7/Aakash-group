@@ -110,16 +110,16 @@ const industries = [
                           Our Industries
                         </div>
                         {industries.map((industry, index) => (
-                          <Link
+                          <a
                             key={index}
-                            to={industry.path}
+                            href={industry.path}
                             className="flex items-center px-6 py-4 text-base text-gray-700 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-indigo-50/80 hover:text-blue-600 transition-all duration-300 group relative overflow-hidden"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <div className="text-2xl mr-4 group-hover:scale-110 transition-transform duration-300">{industry.icon}</div>
                             <span className="font-medium group-hover:translate-x-1 transition-transform duration-300">{industry.name}</span>
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     )}

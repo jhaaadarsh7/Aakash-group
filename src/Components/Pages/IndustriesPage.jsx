@@ -234,7 +234,7 @@ const IndustriesPage = () => {
     },
      {
       id: 8,
-      title: "BnBKTM Pvt. Ltd.",
+      title: "BnBKTM ",
       description:
       "BNB KTM is your gateway to exceptional short-term and long-term apartment rentals in Kupondole, Lalitpur.",
       features: [
@@ -245,7 +245,7 @@ const IndustriesPage = () => {
       ],
       image:
         "https://bnbktm.com/bnblogo.png",
-      url: "/industries",
+      url: "https://bnbktm.com/",
     },
   
     
