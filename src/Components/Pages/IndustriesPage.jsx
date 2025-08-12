@@ -200,7 +200,7 @@ const IndustriesPage = () => {
         "Policy Customization",
       ],
       image: "https://www.sanimareliancelife.com/themes/sanimareliancelife/images/logo.png",
-      url: "https://www.reliancegeneral.co.in/",
+      url: "https://www.sanimareliancelife.com/",
     },
     {
       id: 6,
