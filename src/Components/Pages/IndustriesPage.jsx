@@ -14,7 +14,7 @@ import {
 } from "@heroicons/react/24/outline";
 import hero from "../../assets/images/Aakash.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import snacks from '../../assets/images/snacks.png';
+import snacks from '../../assets/images/snacks1.png';
 
 import { gsap } from "gsap";
 
