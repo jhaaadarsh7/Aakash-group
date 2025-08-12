@@ -190,7 +190,7 @@ const IndustriesPage = () => {
     },
     {
       id: 5,
-      title: "Reliance Life Insurance Ltd.",
+      title: "SanimaReliance Life Insurance Ltd.",
       description:
         "A prominent life insurance company providing flexible and affordable life insurance products to secure your family's future.",
       features: [
