@@ -174,7 +174,7 @@ const ContactPage = () => {
         ref={subtitleRef}                 
         className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed"               
       >                 
- Contact us for inquiries, partnership opportunities, or to learn more about Aakash Group's operations and our unwavering commitment to excellence across all endeavors.       </p>                            
+Reach out to learn more about Aakash Group, our operations, and our commitment to excellence across every venture.</p>                            
     </div>           
   </div>         
 </section>

@@ -399,15 +399,13 @@ const IndustriesPage = () => {
             ref={ctaTitleRef}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
           >
-            Ready to Transform Your Industry?
-          </h2>
+Shaping the Future with Excellence          </h2>
 
           <p
             ref={ctaSubtitleRef}
             className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto"
           >
-            Partner with Aakash Group and experience the difference that
-            excellence, innovation, and commitment can make for your business.
+Aakash Group drives innovation, delivers results, and sets new standards of success across industries.
           </p>
 
           <div

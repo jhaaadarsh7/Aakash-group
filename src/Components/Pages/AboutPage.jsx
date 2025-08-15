@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
   ArrowRightIcon,
-  UsersIcon,
-  ViewfinderCircleIcon,
+ViewfinderCircleIcon,
   TrophyIcon,
+  
   BriefcaseIcon,
   CheckCircleIcon,
   StarIcon,
@@ -17,6 +17,7 @@ import {
   CogIcon,
   BoltIcon,
   ShieldCheckIcon,
+  ChartBarIcon,
 } from "@heroicons/react/24/outline";
 
 import second from "../../assets/images/5.png";
@@ -288,7 +289,7 @@ For over a century, Aakash Group has been shaping lives across diverse industrie
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            {/* <div className="grid grid-cols-2 gap-6">
               <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <ViewfinderCircleIcon className="w-8 h-8 text-white" />
@@ -300,10 +301,69 @@ For over a century, Aakash Group has been shaping lives across diverse industrie
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <TrophyIcon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Values</h3>
-                <p className="text-gray-600 leading-relaxed">Trust, quality, and community upliftment</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Mission</h3>
+                <p className="text-gray-600 leading-relaxed">Delivering quality, inspiring progress, and empowering communities.</p>
               </div>
-            </div>
+              <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <TrophyIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Values</h3>
+                <p className="text-gray-600 leading-relaxed">Innovation , Integrity , Community , Sustainability</p>
+              </div>
+              <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <TrophyIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Focus</h3>
+                <p className="text-gray-600 leading-relaxed"> Expanding possibilities across industries for a stronger Nepal.</p>
+              </div>
+            </div> */}
+            <div className="grid grid-cols-2 gap-6">
+  {/* Vision */}
+  <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
+    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+      <ViewfinderCircleIcon className="w-8 h-8 text-white" />
+    </div>
+    <h3 className="text-xl font-bold text-gray-900 mb-3">Vision</h3>
+    <p className="text-gray-600 leading-relaxed">
+      Shaping Nepal's future through innovation and trust
+    </p>
+  </div>
+
+  {/* Mission */}
+  <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
+    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+      <TrophyIcon className="w-8 h-8 text-white" />
+    </div>
+    <h3 className="text-xl font-bold text-gray-900 mb-3">Mission</h3>
+    <p className="text-gray-600 leading-relaxed">
+      Delivering quality, inspiring progress, and empowering communities.
+    </p>
+  </div>
+
+  {/* Values */}
+  <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
+    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+      <LightBulbIcon className="w-8 h-8 text-white" />
+    </div>
+    <h3 className="text-xl font-bold text-gray-900 mb-3">Values</h3>
+    <p className="text-gray-600 leading-relaxed">
+      Innovation , Integrity , Community , Sustainability
+    </p>
+  </div>
+
+  {/* Focus */}
+  <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
+    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+      <ChartBarIcon className="w-8 h-8 text-white" />
+    </div>
+    <h3 className="text-xl font-bold text-gray-900 mb-3">Focus</h3>
+    <p className="text-gray-600 leading-relaxed">
+      Expanding possibilities across industries for a stronger Nepal.
+    </p>
+  </div>
+</div>
           </div>
         </div>
       </section>
@@ -313,8 +373,8 @@ For over a century, Aakash Group has been shaping lives across diverse industrie
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Pillars of
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Pillars of 
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ml-3">
                 Aakash Group
               </span>
             </h2>
@@ -330,37 +390,37 @@ For over a century, Aakash Group has been shaping lives across diverse industrie
                 icon: StarIcon,
                 title: "Proven Excellence",
                 description:
-                  "Decades of experience delivering exceptional results across multiple industries with a track record of success.",
+                  "A legacy of delivering impactful projects and ventures in Nepal, backed by years of diverse industry experience and consistent success.",
               },
               {
                 icon: CogIcon,
                 title: "Innovation Focus",
                 description:
-                  "Cutting-edge technology and innovative solutions that drive efficiency and create competitive advantages.",
+                  "Leveraging creativity, modern technology, and fresh ideas to bring unique, efficient, and future-ready solutions to the Nepalese market.",
               },
               {
                 icon: ShieldCheckIcon,
                 title: "Quality Assurance",
                 description:
-                  "Rigorous quality control processes ensuring the highest standards in every project we undertake.",
+                  "Maintaining uncompromising standards through meticulous processes to ensure excellence in every product, service, and partnership.",
               },
               {
                 icon: BuildingOfficeIcon,
                 title: "Industry Expertise",
                 description:
-                  "Deep domain knowledge across various sectors with specialized teams for each industry vertical.",
+                  "Strong presence across multiple sectors with specialized teams dedicated to driving growth and innovation in each field.",
               },
               {
                 icon: CheckCircleIcon,
                 title: "Customer Commitment",
                 description:
-                  "Dedicated to customer satisfaction with personalized service and long-term partnership approach.",
+                  "Building lasting relationships by understanding client needs, offering personalized solutions, and ensuring exceptional experiences.",
               },
               {
                 icon: BoltIcon,
-                title: "Sustainable Solutions",
+                title: "Sustainable Growth",
                 description:
-                  "Environmentally conscious practices and sustainable solutions that benefit communities and the planet.",
+                  "Championing responsible business practices that support local communities, preserve the environment, and contribute to Nepal’s long-term development.",
               },
             ].map((item, index) => (
               <div
@@ -457,14 +517,11 @@ For over a century, Aakash Group has been shaping lives across diverse industrie
         {/* Bio Text */}
         <div className="lg:col-span-2 space-y-6">
           <p className="text-gray-700 leading-relaxed text-lg">
-            Mr. Ankur Agrawal is the Managing Director of Aakash Group, leading multiple companies across diverse industries. He is the Founder and CEO of Aakash Labs, a firm specializing in software development and digital media management. He also founded and currently chairs Aakash Capital Ltd., a licensed Merchant Bank regulated by the Securities Board of Nepal (SEBON).
-          </p>
+Mr. Ankur Agrawal is the Managing Director of Aakash Group, steering multiple companies across diverse sectors in Nepal. He is the Founder & CEO of Aakash Labs, a leading firm in software development and digital media management, and the Founder & Chairman of Aakash Capital Ltd., a licensed merchant bank regulated by the Securities Board of Nepal (SEBON).          </p>
           <p className="text-gray-700 leading-relaxed text-lg">
-            Additionally, he serves as the Managing Proprietor of Aakash Foods, which focuses on manufacturing packaged food products and operating a fast food restaurant chain. Ankur successfully founded, built, and exited Aakash Tech, which developed an innovative aggregator app and Bulk SMS solutions.
-          </p>
+He also leads Aakash Foods as Managing Proprietor, overseeing packaged food manufacturing and a growing fast food restaurant chain. Previously, he founded, scaled, and successfully exited Aakash Tech, known for its innovative aggregator app and Bulk SMS solutions.          </p>
           <p className="text-gray-700 leading-relaxed text-lg">
-            He has served as a board member of CNIYEF, member of CNI, Round Table and is an alumnus of the WEF Global Shapers community. He holds a Bachelor of Science in Finance from Bentley University, Boston, and completed MBA from the McCallum Graduate School of Business.
-          </p>
+Ankur has contributed to the business community as a Board Member of CNIYEF, a member of CNI, Round Table, and an alumnus of the WEF Global Shapers community. He holds a B.Sc. in Finance from Bentley University, Boston, and an MBA from the McCallum Graduate School of Business.          </p>
 
           {/* Achievements */}
           <div className="grid grid-cols-2 gap-4 mt-8">
