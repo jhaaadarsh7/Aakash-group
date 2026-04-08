@@ -1,4 +1,4 @@
-import  { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   ArrowRightIcon,
   ViewfinderCircleIcon,
@@ -189,13 +189,12 @@ const AboutPage = () => {
           {heroImages.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                index === currentSlide
-                  ? "opacity-100 transform translate-x-0 scale-100"
-                  : index < currentSlide
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${index === currentSlide
+                ? "opacity-100 transform translate-x-0 scale-100"
+                : index < currentSlide
                   ? "opacity-0 transform -translate-x-full scale-105"
                   : "opacity-0 transform translate-x-full scale-105"
-              }`}
+                }`}
             >
               <img
                 src={image.src}
@@ -219,11 +218,10 @@ const AboutPage = () => {
                 key={index}
                 onClick={() => goToSlide(index)}
                 disabled={isTransitioning}
-                className={`relative w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 disabled:cursor-not-allowed ${
-                  index === currentSlide
-                    ? "bg-white scale-125 shadow-lg"
-                    : "bg-white/50 hover:bg-white/75 hover:scale-110"
-                }`}
+                className={`relative w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 disabled:cursor-not-allowed ${index === currentSlide
+                  ? "bg-white scale-125 shadow-lg"
+                  : "bg-white/50 hover:bg-white/75 hover:scale-110"
+                  }`}
               >
                 {index === currentSlide && (
                   <div className="absolute inset-0 rounded-full bg-white animate-pulse" />
@@ -505,65 +503,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Managing Director Section */}
-      {/* <section className="py-16 sm:py-20 lg:py-24 bg-white">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-    <div className="text-center mb-12 lg:mb-16">
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-        About the Managing Director
-      </h2>
-      <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8" />
-    </div>
-
-    <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100">
-      <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center">
-        
-        
-        <div className="text-center lg:text-left">
-          <div className="relative inline-block mb-6">
-            <div className="w-52 h-60 lg:w-80 lg:h-80 rounded-2xl overflow-hidden  shadow-xl mx-auto lg:mx-0">
-              <img
-                src={MD}
-                alt="Mr. Ankur Agrawal"
-                className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                style={{
-                  filter: 'contrast(1.1) saturate(1.1)',
-                }}
-              />
-            </div>
-          </div>
-
-          <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Mr. Ankur Agrawal</h3>
-          <p className="text-blue-600 font-semibold text-lg">Managing Director</p>
-        </div>
-
-        <div className="lg:col-span-2 space-y-6">
-          <p className="text-gray-700 leading-relaxed text-lg">
-Mr. Ankur Agrawal is the Managing Director of Aakash Group, steering multiple companies across diverse sectors in Nepal. He is the Founder & CEO of Aakash Labs, a leading firm in software development and digital media management, and the Founder & Chairman of Aakash Capital Ltd., a licensed merchant bank regulated by the Securities Board of Nepal (SEBON).          </p>
-          <p className="text-gray-700 leading-relaxed text-lg">
-He also leads Aakash Foods as Managing Proprietor, overseeing packaged food manufacturing and a growing fast food restaurant chain. Previously, he founded, scaled, and successfully exited Aakash Tech, known for its innovative aggregator app and Bulk SMS solutions.          </p>
-          <p className="text-gray-700 leading-relaxed text-lg">
-Ankur has contributed to the business community as a Board Member of CNIYEF, a member of CNI, Round Table, and an alumnus of the WEF Global Shapers community. He holds a B.Sc. in Finance from Bentley University, Boston, and an MBA from the McCallum Graduate School of Business.          </p>
-
-          <div className="grid grid-cols-2 gap-4 mt-8">
-            {[
-              "WEF Global Shapers Alumni",
-              "MBA Graduate",
-              "Multiple Company Founder",
-              "Industry Leader",
-            ].map((achievement, index) => (
-              <div key={index} className="flex items-center space-x-2">
-                <StarIcon className="w-5 h-5 text-yellow-500 flex-shrink-0" />
-                <span className="text-gray-700 font-medium text-sm">{achievement}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> */}
-
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12 lg:mb-16">
@@ -606,35 +545,25 @@ Ankur has contributed to the business community as a Board Member of CNIYEF, a m
               {/* Bio Text */}
               <div className="lg:col-span-2 space-y-6">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Mr. Ankur Agrawal is the Managing Director of Aakash Group,
-                  steering multiple companies across diverse sectors in Nepal.
-                  He is the Founder & CEO of Aakash Labs, a leading firm in
-                  software development and digital media management, and the
-                  Founder & Chairman of Aakash Capital Ltd., a licensed merchant
-                  bank regulated by the Securities Board of Nepal (SEBON).
+                  Ankur Agrawal is the Managing Director of Aakash Group, leading a diversified portfolio across technology, financial services, and consumer industries. He is the Founder and Chief Product Officer of Aakash Labs, a company specializing in software development and digital media management services, delivering innovative digital solutions to clients across markets. He is also the Founder and Chairman of Aakash Capital Ltd., a licensed Merchant Bank regulated by the Securities Board of Nepal (SEBON), focused on providing investment banking and financial advisory services.
                 </p>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  He also leads Aakash Foods as Managing Proprietor, overseeing
-                  packaged food manufacturing and a growing fast food restaurant
-                  chain. Previously, he founded, scaled, and successfully exited
-                  Aakash Tech, known for its innovative aggregator app and Bulk
-                  SMS solutions.
+                  In the consumer sector, Mr. Agrawal leads Aakash Foods as Managing Proprietor, and has established Aakash Snacks Pvt. Ltd, integrating food manufacturing operations to become the largest quick service fast food chain in its category in Nepal. Earlier in his career, he founded Aakash Tech, a technology venture recognized for its aggregator platform and SMS communication solutions, which he successfully scaled and exited.
                 </p>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Ankur has contributed to the business community as a Board
-                  Member of CNIYEF, a member of CNI, Round Table, and an alumnus
-                  of the WEF Global Shapers community. He holds a B.Sc. in
-                  Finance from Bentley University, Boston, and an MBA from the
-                  McCallum Graduate School of Business.
+                  Mr. Agrawal holds a Bachelor of Science in Finance from Bentley University, USA and a Master of Business Administration (MBA) from the McCallum Graduate School of Business. He has also completed the Strategic Leadership program at Indian Institute of Management (IIM) Ahmedabad.
                 </p>
 
                 {/* Achievements */}
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   {[
-                    "WEF Global Shapers Alumni",
-                    "MBA Graduate",
-                    "Multiple Company Founder",
-                    "Industry Leader",
+                    "Vice President of the Confederation of Nepalese Industries Young Entrepreneurs Forum (CNIYEF); Chair for International Relations ",
+
+                    "Permanent Corporate Member of the Confederation of Nepalese Industries (CNI) ",
+
+                    "Member of the Entrepreneurs’ Organization (EO) – South Asia Bridge",
+
+                    "Alumnus of the World Economic Forum’s Global Shapers Community"
                   ].map((achievement, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <StarIcon className="w-5 h-5 text-yellow-500 flex-shrink-0" />
