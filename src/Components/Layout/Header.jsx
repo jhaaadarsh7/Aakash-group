@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown, Menu, X, Phone, Mail } from 'lucide-react';
+import { ChevronDown, ChevronRight, Menu, X, Phone, Mail } from 'lucide-react';
 import logo from "../../assets/images/LOGO.png";
 import { Link } from 'react-router-dom';
 
@@ -8,6 +8,7 @@ const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
+  const [isSubDropdownOpen, setIsSubDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   const navLinks = [
@@ -18,14 +19,20 @@ const Header = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-const industries = [
-  { name: "Food And Beverages", path: "/industries" },
-  { name: "Information And Technology", path: "/industries" },
-  { name: "Banking", path: "/industries" },
-  { name: "General Insurance", path: "/industries" },
-  { name: "Life Insurance", path: "/industries" },
-  { name: "Real Estate", path: "/industries" },
-];
+  const industries = [
+    { name: "Food And Beverages", path: "https://angansweets.com/" },
+    {
+      name: "Information And Technology",
+      children: [
+        { name: "Aakash Labs", path: "https://aakashlabs.com" },
+        { name: "RelayN", path: "https://relayn.ai" },
+      ],
+    },
+    { name: "Banking", path: "https://aakashcapital.com.np/" },
+    { name: "General Insurance", path: "https://siddharthapremier.com.np/" },
+    { name: "Life Insurance", path: "https://www.sanimareliancelife.com/" },
+    { name: "Real Estate", path: "https://bnbktm.com/" },
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -105,18 +112,51 @@ const industries = [
                         <div className="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-widest border-b border-gray-100 mb-2">
                           Our Industries
                         </div>
-                        {industries.map((industry, index) => (
-                          <a
-                            key={index}
-                            href={industry.path}
-                            className="flex items-center px-6 py-4 text-base text-gray-700 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-indigo-50/80 hover:text-blue-600 transition-all duration-300 group relative overflow-hidden"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <div className="text-2xl mr-4 group-hover:scale-110 transition-transform duration-300">{industry.icon}</div>
-                            <span className="font-medium group-hover:translate-x-1 transition-transform duration-300">{industry.name}</span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                          </a>
-                        ))}
+                        {industries.map((industry, index) => {
+                          if (industry.children) {
+                            return (
+                              <div
+                                key={index}
+                                className="relative group/submenu px-6 py-4 text-base text-gray-700 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-indigo-50/80 hover:text-blue-600 transition-all duration-300 flex items-center justify-between cursor-pointer"
+                              >
+                                <div className="flex items-center">
+                                  <div className="text-2xl mr-4" /> {/* Match icon spacing */}
+                                  <span className="font-medium">{industry.name}</span>
+                                </div>
+                                <ChevronRight className="h-4 w-4 transition-transform group-hover/submenu:translate-x-1" />
+
+                                <div className="absolute left-full top-0 w-64 ml-1 bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 py-2 opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-300">
+                                  {industry.children.map((child, cIdx) => (
+                                    <a
+                                      key={cIdx}
+                                      href={child.path}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="flex items-center px-6 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-indigo-50/80 hover:text-blue-600 transition-all duration-300"
+                                      onClick={() => setIsDropdownOpen(false)}
+                                    >
+                                      {child.name}
+                                    </a>
+                                  ))}
+                                </div>
+                              </div>
+                            );
+                          }
+                          return (
+                            <a
+                              key={index}
+                              href={industry.path}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center px-6 py-4 text-base text-gray-700 hover:bg-gradient-to-r hover:from-blue-50/80 hover:to-indigo-50/80 hover:text-blue-600 transition-all duration-300 group relative overflow-hidden"
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              <div className="text-2xl mr-4 group-hover:scale-110 transition-transform duration-300">{industry.icon}</div>
+                              <span className="font-medium group-hover:translate-x-1 transition-transform duration-300">{industry.name}</span>
+                              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </a>
+                          );
+                        })}
                       </div>
                     )}
                   </div>
@@ -198,20 +238,60 @@ const industries = [
                       </div>
                       {isDropdownOpen && (
                         <div className="ml-6 space-y-2 animate-in slide-in-from-left duration-300">
-                          {industries.map((industry, index) => (
-                            <Link
-                              key={index}
-                              to={industry.path}
-                              className={`flex items-center ${scrolled ? 'text-gray-300' : 'text-gray-700'} px-6 py-3 rounded-xl text-lg transition-all duration-300 transform hover:translate-x-2 hover:scale-105`}
-                              onClick={() => {
-                                setIsMenuOpen(false);
-                                setIsDropdownOpen(false);
-                              }}
-                            >
-                              <div className="text-xl mr-4">{industry.icon}</div>
-                              <span className="font-medium">{industry.name}</span>
-                            </Link>
-                          ))}
+                          {industries.map((industry, index) => {
+                            if (industry.children) {
+                              return (
+                                <div key={index} className="space-y-2">
+                                  <button
+                                    onClick={() => setIsSubDropdownOpen(!isSubDropdownOpen)}
+                                    className={`w-full flex items-center justify-between ${scrolled ? 'text-gray-300' : 'text-gray-700'} px-6 py-3 rounded-xl text-lg transition-all duration-300`}
+                                  >
+                                    <div className="flex items-center">
+                                      <div className="text-xl mr-4" /> {/* Match icon spacing */}
+                                      <span className="font-medium">{industry.name}</span>
+                                    </div>
+                                    <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isSubDropdownOpen ? 'rotate-180' : ''}`} />
+                                  </button>
+                                  {isSubDropdownOpen && (
+                                    <div className="ml-4 space-y-1 animate-in slide-in-from-top-2 duration-300">
+                                      {industry.children.map((child, cIdx) => (
+                                        <a
+                                          key={cIdx}
+                                          href={child.path}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className={`block ${scrolled ? 'text-gray-400' : 'text-gray-600'} px-8 py-2 rounded-lg text-base transition-all duration-300`}
+                                          onClick={() => {
+                                            setIsMenuOpen(false);
+                                            setIsDropdownOpen(false);
+                                            setIsSubDropdownOpen(false);
+                                          }}
+                                        >
+                                          {child.name}
+                                        </a>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            }
+                            return (
+                              <a
+                                key={index}
+                                href={industry.path}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`flex items-center ${scrolled ? 'text-gray-300' : 'text-gray-700'} px-6 py-3 rounded-xl text-lg transition-all duration-300 transform hover:translate-x-2 hover:scale-105`}
+                                onClick={() => {
+                                  setIsMenuOpen(false);
+                                  setIsDropdownOpen(false);
+                                }}
+                              >
+                                <div className="text-xl mr-4">{industry.icon}</div>
+                                <span className="font-medium">{industry.name}</span>
+                              </a>
+                            );
+                          })}
                         </div>
                       )}
                     </div>
