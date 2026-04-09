@@ -242,204 +242,15 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* About Us Section */}
-      <section
-        id="about-story"
-        className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden"
-      >
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 2px 2px, #3b82f6 1px, transparent 0)",
-              backgroundSize: "40px 40px",
-            }}
-          />
-        </div>
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
+      {/* How We Started Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="text-center mb-12 lg:mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mb-6">
               <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 ✨ About Aakash Group
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Our Legacy of
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-                Excellence & Trust
-              </span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center mb-16">
-            <div className="space-y-6">
-              <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
-                Established over a century ago, Aakash Group began as a
-                pioneering importer of textiles and electronics. Today, we're a
-                diversified powerhouse shaping lives across food & hospitality,
-                real estate, insurance, capital markets, IT, and beyond.
-              </p>
-              <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
-                For over a century, Aakash Group has been shaping lives across
-                diverse industries with unwavering commitment to trust, quality,
-                and community upliftment.{" "}
-              </p>
-
-              {/* Key Points */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-                {[
-                  "Century-old legacy",
-                  "Diversified portfolio",
-                  "Community focused",
-                  "Sustainable growth",
-                ].map((point, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center space-x-3 group"
-                  >
-                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <CheckCircleIcon className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="text-gray-700 font-medium">{point}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-6">
-              {/* Vision */}
-              <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <ViewfinderCircleIcon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Vision</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Shaping Nepal's future through innovation and trust
-                </p>
-              </div>
-
-              {/* Mission */}
-              <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <TrophyIcon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Mission
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Delivering quality, inspiring progress, and empowering
-                  communities.
-                </p>
-              </div>
-
-              {/* Values */}
-              <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <LightBulbIcon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Values</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Innovation , Integrity , Community , Sustainability
-                </p>
-              </div>
-
-              {/* Focus */}
-              <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <ChartBarIcon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Focus</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Expanding possibilities across industries for a stronger
-                  Nepal.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pillars of  Section */}
-      <div className="py-16 sm:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Pillars of
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ml-3">
-                Aakash Group
-              </span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our commitment to excellence and innovation sets us apart in every
-              industry we serve.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: StarIcon,
-                title: "Proven Excellence",
-                description:
-                  "A legacy of delivering impactful projects and ventures in Nepal, backed by years of diverse industry experience and consistent success.",
-              },
-              {
-                icon: CogIcon,
-                title: "Innovation Focus",
-                description:
-                  "Leveraging creativity, modern technology, and fresh ideas to bring unique, efficient, and future-ready solutions to the Nepalese market.",
-              },
-              {
-                icon: ShieldCheckIcon,
-                title: "Quality Assurance",
-                description:
-                  "Maintaining uncompromising standards through meticulous processes to ensure excellence in every product, service, and partnership.",
-              },
-              {
-                icon: BuildingOfficeIcon,
-                title: "Industry Expertise",
-                description:
-                  "Strong presence across multiple sectors with specialized teams dedicated to driving growth and innovation in each field.",
-              },
-              {
-                icon: CheckCircleIcon,
-                title: "Customer Commitment",
-                description:
-                  "Building lasting relationships by understanding client needs, offering personalized solutions, and ensuring exceptional experiences.",
-              },
-              {
-                icon: BoltIcon,
-                title: "Sustainable Growth",
-                description:
-                  "Championing responsible business practices that support local communities, preserve the environment, and contribute to Nepal’s long-term development.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <item.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      {/* How We Started Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-          <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               How We Started
             </h2>
@@ -559,11 +370,11 @@ const AboutPage = () => {
                   {[
                     "Vice President of the Confederation of Nepalese Industries Young Entrepreneurs Forum (CNIYEF); Chair for International Relations ",
 
-                    "Permanent Corporate Member of the Confederation of Nepalese Industries (CNI) ",
+                    "Permanent Corporate Member of the Confederation of Nepalese Industries (CNI)",
 
-                    "Member of the Entrepreneurs’ Organization (EO) – South Asia Bridge",
+                    "Member of the Entrepreneurs' Organization (EO) - South Asia Bridge",
 
-                    "Alumnus of the World Economic Forum’s Global Shapers Community"
+                    "Alumnus of the World Economic Forum's Global Shapers Community"
                   ].map((achievement, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <StarIcon className="w-5 h-5 text-yellow-500 flex-shrink-0" />
@@ -578,6 +389,195 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+      {/* About Us Section */}
+      <section
+        id="about-story"
+        className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 2px 2px, #3b82f6 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              Our Legacy of
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+                Excellence & Trust
+              </span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center mb-16">
+            <div className="space-y-6">
+              <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+                Established over a century ago, Aakash Group began as a
+                pioneering importer of textiles and electronics. Today, we're a
+                diversified powerhouse shaping lives across food & hospitality,
+                real estate, insurance, capital markets, IT, and beyond.
+              </p>
+              <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+                For over a century, Aakash Group has been shaping lives across
+                diverse industries with unwavering commitment to trust, quality,
+                and community upliftment.{" "}
+              </p>
+
+              {/* Key Points */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                {[
+                  "Century-old legacy",
+                  "Diversified portfolio",
+                  "Community focused",
+                  "Sustainable growth",
+                ].map((point, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center space-x-3 group"
+                  >
+                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <CheckCircleIcon className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="text-gray-700 font-medium">{point}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-6">
+              {/* Vision */}
+              <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <ViewfinderCircleIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Vision</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Shaping Nepal's future through innovation and trust
+                </p>
+              </div>
+
+              {/* Mission */}
+              <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <TrophyIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Mission
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Delivering quality, inspiring progress, and empowering
+                  communities.
+                </p>
+              </div>
+
+              {/* Values */}
+              <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <LightBulbIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Values</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Innovation. Integrity. Community. Sustainability
+                </p>
+              </div>
+
+              {/* Focus */}
+              <div className="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <ChartBarIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Focus</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Expanding possibilities across industries for a stronger
+                  Nepal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pillars of  Section */}
+      <div className="py-16 sm:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Pillars of
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ml-3">
+                Aakash Group
+              </span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our commitment to excellence and innovation sets us apart in every
+              industry we serve.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: StarIcon,
+                title: "Proven Excellence",
+                description:
+                  "A legacy of delivering impactful projects and ventures in Nepal, backed by years of diverse industry experience and consistent success.",
+              },
+              {
+                icon: CogIcon,
+                title: "Innovation Focus",
+                description:
+                  "Leveraging creativity, modern technology, and fresh ideas to bring unique, efficient, and future-ready solutions to the Nepalese market.",
+              },
+              {
+                icon: ShieldCheckIcon,
+                title: "Quality Assurance",
+                description:
+                  "Maintaining uncompromising standards through meticulous processes to ensure excellence in every product, service, and partnership.",
+              },
+              {
+                icon: BuildingOfficeIcon,
+                title: "Industry Expertise",
+                description:
+                  "Strong presence across multiple sectors with specialized teams dedicated to driving growth and innovation in each field.",
+              },
+              {
+                icon: CheckCircleIcon,
+                title: "Customer Commitment",
+                description:
+                  "Building lasting relationships by understanding client needs, offering personalized solutions, and ensuring exceptional experiences.",
+              },
+              {
+                icon: BoltIcon,
+                title: "Sustainable Growth",
+                description:
+                  "Championing responsible business practices that support local communities, preserve the environment, and contribute to Nepal’s long-term development.",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <item.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Careers Section */}
       <section
