@@ -274,7 +274,7 @@ const AboutPage = () => {
                   not just for our company, but for the communities and country
                   we serve. From the foods we serve to the futures we design, we
                   move with purpose — driven by trust, community, and a
-                  commitment to the world we share.
+                  commitment to the world.
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -366,7 +366,7 @@ const AboutPage = () => {
                 </p>
 
                 {/* Achievements */}
-                <div className="grid grid-cols-2 gap-4 mt-8">
+                <div className="flex flex-col gap-4 mt-8">
                   {[
                     "Vice President of the Confederation of Nepalese Industries Young Entrepreneurs Forum (CNIYEF); Chair for International Relations ",
 
